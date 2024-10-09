@@ -46,7 +46,7 @@ Incident and operations management includes tasks such as monitoring, event mana
 |Task 2| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
 |Task 3| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
 {: row-headers}
-{: caption="Table 1. Responsibilities for incident and operations" caption-side="bottom"}
+{: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -66,7 +66,7 @@ Change management includes tasks such as deployment, configuration, upgrades, pa
 |Task 2| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
 |Task 3| {{site.data.keyword.IBM_notm}} responsibility description  | Customer responsibility description |
 {: row-headers}
-{: caption="Table 2. Responsibilities for change management" caption-side="bottom"}
+{: caption="Responsibilities for change management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -83,7 +83,7 @@ Identity and access management includes tasks such as authentication, authorizat
 | Secure with least privilege | Document the minimal IAM access requirements to run the DA. |  |
 | Manage secrets | | * Generate the necessary secrets (IAM API keys) and configure trusted profiles that are required for the DA. \n * Manage generated secrets by following secure best practices. |
 {: row-headers}
-{: caption="Table 3. Responsibilities for identity and access management" caption-side="bottom"}
+{: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Security and regulation compliance
@@ -99,7 +99,7 @@ Security and regulation compliance includes tasks such as security controls impl
 | Meet security and compliance objectives | Provide a secure DA that complies with declared standards. For more information about data security, see [How do I know that my data is safe?](/docs/overview?topic=overview-security).
 | Verify configuration changes | | Understand the effects on the security and compliance posture of any user-initiated changes to the default configuration. Run {{site.data.keyword.compliance_long}} checks if needed to ensure that the DA remains in compliance. |
 {: row-headers}
-{: caption="Table 4. Responsibilities for security and regulation compliance" caption-side="bottom"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or IBM might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Disaster recovery
