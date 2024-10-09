@@ -1,0 +1,64 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs-internal/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: track-spend-with-cloudability
+    href: /docs/track-spend-with-cloudability
+    path: track-spend-with-cloudability
+    audience: solution
+    category: solution_docs
+    content-type: deployment
+    # industry: industry-value # Replace
+    use-case: FinOps
+    # compliance: compliance-value # Replace
+    deployable: true # Set to true if this is a deployment guide that's associated with a deployable architecture in the catalog
+    description: Connect your IBM Cloud Account or Enterprise to IBM Cloudability and start tracking your IBM Cloud spend with the rest of your cloud service providers.
+    label: Cloudability Enablement
+  entries:
+  - navgroup:
+      id: overview
+      topics:
+      - overview.md
+      - topic: release-notes.md
+        navtitle: Release notes
+  - navgroup:
+      id: architecture
+      topics:
+      - reference-architecture.md
+  - navgroup:
+      id: plan
+      topics:
+      - plan.md
+  - navgroup:
+      id: deploy
+      topics:
+      - deploy.md
+      - configure.md
+  - navgroup:
+      id: reference
+      topics:
+      - responsibilities-da.md
+  - navgroup:
+      id: help
+      topics:
+      - topic: get-help-da.md
+        navtitle: Getting help and support
+      - topic: faqs.md
+        navtitle: FAQs
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - include: ../secure-enterprise/ts-needs-attention.md
+          - include: ../secure-enterprise/ts-deploy.md
+  - navgroup:
+      id: help
+      topics:
+      - get-help-da.md
+      - faqs.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - include: ../secure-enterprise/ts-needs-attention.md
+          - include: ../secure-enterprise/ts-deploy.md
