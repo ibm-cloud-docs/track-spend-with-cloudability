@@ -14,32 +14,37 @@ toc:
     use-case: FinOps
     # compliance: compliance-value # Replace
     deployable: true # Set to true if this is a deployment guide that's associated with a deployable architecture in the catalog
-    description: Connect your IBM Cloud Account or Enterprise to IBM Cloudability and start tracking your IBM Cloud spend with the rest of your cloud service providers.
+    description: Connect your IBM Cloud Account or Enterprise to {{site.data.keyword.IBM_notm}} Cloudability and start tracking your IBM Cloud expenses along with any other cloud service providers.
     label: Cloudability Enablement
   entries:
   - navgroup:
       id: overview
       topics:
-      - overview.md
+      - topic: overview.md
+        navtitle: Overview
       - topic: release-notes.md
         navtitle: Release notes
   - navgroup:
-      id: architecture
-      topics:
-      - reference-architecture.md
-  - navgroup:
       id: plan
       topics:
-      - plan.md
+        - topic: estimate.md
+          navtitle: Estimating your costs
+        - topic: cloudability.md
+          navtitle: Creating {{site.data.keyword.IBM_notm}} Cloudability
   - navgroup:
       id: deploy
       topics:
-      - deploy.md
-      - configure.md
+        - topic: access.md
+          navtitle: Granting Access
+        - topic: configure.md
+          navtitle: Configuration Options
+        - topic: deploy.md
+          navtitle: Deploying
   - navgroup:
       id: reference
       topics:
-      - responsibilities-da.md
+        - topic: responsibilities-da.md
+          navtitle: Understanding your responsibilities
   - navgroup:
       id: help
       topics:
@@ -48,17 +53,17 @@ toc:
       - topic: faqs.md
         navtitle: FAQs
       - topicgroup:
-          label: Troubleshooting
+          label: Troubleshooting projects
           topics:
-          - include: ../secure-enterprise/ts-needs-attention.md
-          - include: ../secure-enterprise/ts-deploy.md
-  - navgroup:
-      id: help
-      topics:
-      - get-help-da.md
-      - faqs.md
+            - include: ../secure-enterprise/ts-needs-attention.md
+              navtitle: How do I address a failed validation?
+            - include: ../secure-enterprise/ts-deploy.md
+              navtitle: How do I address a failed deployment?
       - topicgroup:
-          label: Troubleshooting
+          label: Troubleshooting Deployment
           topics:
-          - include: ../secure-enterprise/ts-needs-attention.md
-          - include: ../secure-enterprise/ts-deploy.md
+            - topic: troubleshoot-cloudability-account-conflict.md
+            - topic: troubleshoot-cloudability-iam-role-conflict.md
+            - topic: troubleshoot-iam-policy-conflict.md
+            - topic: troubleshoot-no-data-in-cloudability.md
+            - topic: troubleshoot-verification-failed.md
