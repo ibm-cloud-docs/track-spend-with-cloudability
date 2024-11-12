@@ -47,7 +47,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 1. Creates or uses an existing [resource group](/docs/account?topic=account-rgs&interface=ui) in the target {{site.data.keyword.cloud_notm}} account
 2. Creates the following services in the target resource group and location:
     - {{site.data.keyword.cos_full_notm}} Bucket in a newly created or existing {{site.data.keyword.cos_full_notm}} Instance
-    - {{site.data.keyword.keymanagementserviceshort}} encryption key which is used for [encryption of a {{site.data.keyword.cos_full_notm}} bucket](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) with your own key using a newly created or existing {{site.data.keyword.keymanagementserviceshort}} instance
+    - {{site.data.keyword.keymanagementserviceshort}} encryption key which is used for [encryption of a Object Storage bucket](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) with your own key using a newly created or existing {{site.data.keyword.keymanagementserviceshort}} instance
 3. [Enables daily billing report exports](/docs/billing-usage?topic=billing-usage-exporting-your-usage&interface=ui#enable-export-usage) to the newly created storage bucket
 4. Grants Cloudability access to read the billing reports from the {{site.data.keyword.cos_full_notm}} bucket
     - *If the account is an enterprise*: Grants Cloudability access to read the list of child accounts in the enterprise

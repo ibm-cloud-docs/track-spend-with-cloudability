@@ -141,5 +141,5 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `cloudability_custom_role_name` | name of the custom role-created access that is granted to Cloudability service ID to read from the billing reports cos bucket | `string` | `"CloudabilityStorageCustomRole"` |
-| `cloudability_enterprise_custom_role_name` | name of the custom role to grant access to a Cloudability service ID to read the enterprise information. Only used of var.is\_enterprise\_account is set. | `string` | `"CloudabilityListAccCustomRole"` |
+| `cloudability_enterprise_custom_role_name` | name of the custom role to grant access to a Cloudability service ID to read the enterprise information. Only used of `is_enterprise_account` is set. | `string` | `"CloudabilityListAccCustomRole"` |
 {: caption="Table 9. IAM inputs" caption-side="bottom"}

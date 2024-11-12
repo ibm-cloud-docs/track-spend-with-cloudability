@@ -14,7 +14,7 @@ toc:
     use-case: FinOps
     # compliance: compliance-value # Replace
     deployable: true # Set to true if this is a deployment guide that's associated with a deployable architecture in the catalog
-    description: Connect your IBM Cloud Account or Enterprise to {{site.data.keyword.IBM_notm}} Cloudability and start tracking your IBM Cloud expenses along with any other cloud service providers.
+    description: Connect your IBM Cloud Account or Enterprise to IBM Cloudability and start tracking your IBM Cloud expenses along with any other cloud service providers.
     label: Cloudability Enablement
   entries:
   - navgroup:
@@ -27,14 +27,12 @@ toc:
   - navgroup:
       id: plan
       topics:
-        - topic: estimate.md
-          navtitle: Estimating your costs
         - topic: cloudability.md
-          navtitle: Creating {{site.data.keyword.IBM_notm}} Cloudability
+          navtitle: Creating IBM Cloudability
   - navgroup:
       id: deploy
       topics:
-        - topic: access.md
+        - topic: plan.md
           navtitle: Granting Access
         - topic: configure.md
           navtitle: Configuration Options

@@ -30,7 +30,7 @@ Review the FAQs for {{site.data.keyword.IBM_notm}} Cloudability Enablement deplo
 {: #how-does-cloudability-access-my-billing-data}
 {: faq}
 
-{{site.data.keyword.IBM_notm}} Cloudability accesses your account billing data by using [billing exports](/docs/billing-usage?topic=billing-usage-exporting-your-usage) to a {{site.data.keyword.cos_full_notm}} bucket. This deployable architecture creates the access policies to an {{site.data.keyword.IBM_notm}} Cloudability owned service ID to be able to read the data in this bucket. Only the bare minimum access is granted to {{site.data.keyword.IBM_notm}} Cloudability.
+{{site.data.keyword.IBM_notm}} Cloudability accesses your account billing data by using [billing exports](/docs/billing-usage?topic=billing-usage-exporting-your-usage) to a Object Storage bucket. This deployable architecture creates the access policies to an {{site.data.keyword.IBM_notm}} Cloudability owned service ID to be able to read the data in this bucket. Only the bare minimum access is granted to {{site.data.keyword.IBM_notm}} Cloudability.
 
 ## How long until {{site.data.keyword.cloud_notm}} billing data is visible in Cloudability?
 {: #how-long-until-I-see-my-data}
