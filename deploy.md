@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -40,8 +40,8 @@ Complete the following steps to run the Cloudability Enablement DA with {{site.d
     1.  Name your project, enter a description, and specify a configuration name. Then, click `Create`.
     2.  Select the region and the resource group where project artifacts must be stored.
 4.  Edit and validate the configuration:
-    1.  Select your authentication method that corresponds to your iam operator that was [previously configured](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability-iam-prereqs). You can use a trusted profile, an existing secret in {{site.data.keyword.secrets-manager_short}}, or add your API key directly. For more information see: [Using an API key or secret to authorize projects](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
-    2.  On the `Required` tab, enter the `cloudability_api_key` with the api key from the [Cloudability account preferences](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-api-key).
+    1.  Select your authentication method that corresponds to your iam operator that was [previously configured](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs). You can use a trusted profile, an existing secret in {{site.data.keyword.secrets-manager_short}}, or add your API key directly. For more information see: [Using an API key or secret to authorize projects](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
+    2.  On the `Required` tab, enter the `cloudability_api_key` with the api key from the [Cloudability account preferences](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#api-key).
     3.  If the {{site.data.keyword.cloud_notm}} account is an enterprise account, then set `is_enterprise_account` to `True` and on the `Optional` tab enter in the value of the `enterprise_id`, which is available in the enterprise details of your [enterprise dashboard](/enterprise)
     4.  Optionally, update any other parameters. See the [configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure) for documentation on the available parameters.
     5.  Save the configuration.

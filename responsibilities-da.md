@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 subcollection: track-spend-with-cloudability
 
@@ -42,9 +42,9 @@ Incident and operations management includes tasks such as monitoring, event mana
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Configuring Activity tracker audit logging| Provide the [activity tracker configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-bucket-audit-events), which are enabled by default | Review and disable these configurations as desired and [configure a target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs) to view the logs |
-|Configuring Monitoring |Provide the [monitoring configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-bucket-metrics), which are enabled by default | 1. Review and disable these configurations as desired.<br /> 2. Configure a [metrics target](/docs/metrics-router?topic=metrics-router-target-manage&interface=ui). |
-|Key Project failover| Support configuration of {{site.data.keyword.keymanagementserviceshort}} failover regions for {{site.data.keyword.cos_full_notm}} encryption | Selecting one of the [supported {{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) when [configuring the region](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-regions) of the deployed infrastructure if {{site.data.keyword.keymanagementserviceshort}} failover support if needed. |
+|Configuring Activity tracker audit logging| Provide the [activity tracker configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#bucket-audit-events), which are enabled by default | Review and disable these configurations as desired and [configure a target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs) to view the logs |
+|Configuring Monitoring |Provide the [monitoring configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#bucket-metrics), which are enabled by default | 1. Review and disable these configurations as desired.<br /> 2. Configure a [metrics target](/docs/metrics-router?topic=metrics-router-target-manage&interface=ui). |
+|Key Project failover| Support configuration of {{site.data.keyword.keymanagementserviceshort}} failover regions for {{site.data.keyword.cos_full_notm}} encryption | Selecting one of the [supported {{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) when [configuring the region](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#regions) of the deployed infrastructure if {{site.data.keyword.keymanagementserviceshort}} failover support if needed. |
 {: row-headers}
 {: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -71,7 +71,7 @@ Identity and access management includes tasks such as authentication, authorizat
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Secure with least privilege | Documenting and maintaining the minimal IAM access requirements to run the DA. | Ensure that the DA operator is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability-iam-prereqs) |
+| Secure with least privilege | Documenting and maintaining the minimal IAM access requirements to run the DA. | Ensure that the DA operator is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs) |
 | Manage secrets | | * Generate the necessary secrets (IAM API keys) and configure trusted profiles that are needed to run the DA. <br /> * Manage generated secrets by following secure best practices such as rotating credentials. |
 | {{site.data.keyword.cos_short}} Billing Report Access | | Administrating access to the {{site.data.keyword.cos_full_notm}}, which contains the {{site.data.keyword.IBM_notm}} billing reports |
 {: row-headers}

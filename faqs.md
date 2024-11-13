@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -30,7 +30,7 @@ Review the FAQs for {{site.data.keyword.IBM_notm}} Cloudability Enablement deplo
 {: #how-does-cloudability-access-my-billing-data}
 {: faq}
 
-{{site.data.keyword.IBM_notm}} Cloudability accesses your account billing data by using [billing exports](/docs/billing-usage?topic=billing-usage-exporting-your-usage) to a Object Storage bucket. This deployable architecture creates the access policies to an {{site.data.keyword.IBM_notm}} Cloudability owned service ID to be able to read the data in this bucket. Only the bare minimum access is granted to {{site.data.keyword.IBM_notm}} Cloudability.
+{{site.data.keyword.IBM_notm}} Cloudability accesses your account billing data by using [billing exports](https://test.cloud.ibm.com/docs/account?topic=account-exporting-your-usage&interface=ui) to a Object Storage bucket. This deployable architecture creates the access policies to an {{site.data.keyword.IBM_notm}} Cloudability owned service ID to be able to read the data in this bucket. Only the bare minimum access is granted to {{site.data.keyword.IBM_notm}} Cloudability.
 
 ## How long until {{site.data.keyword.cloud_notm}} billing data is visible in Cloudability?
 {: #how-long-until-I-see-my-data}
@@ -47,17 +47,17 @@ Open a support case to request that as much as a year of [historical billing dat
 ## Why is there no option configuration option to enable immutable storage on the {{site.data.keyword.cos_full_notm}} bucket?
 {: #why-no-immutable-storage}
 
-{{site.data.keyword.cos_full_notm}} supports the [immutable storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable) of objects in your bucket. However, the manifest files, which are added as part of [billing exports](/docs/billing-usage?topic=billing-usage-exporting-your-usage) are not immutable and are updated daily even if the configuration parameter [`overwrite_existing_reports`](cos-billing-exports-config) is set to `false`.
+{{site.data.keyword.cos_full_notm}} supports the [immutable storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable) of objects in your bucket. However, the manifest files, which are added as part of [billing exports](https://test.cloud.ibm.com/docs/account?topic=account-exporting-your-usage&interface=ui) are not immutable and are updated daily even if the configuration parameter [`overwrite_existing_reports`](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cos-billing-exports-config) is set to `false`.
 
 
 ## How to use an existing {{site.data.keyword.cos_full_notm}} instance?
 {: #existing-object-storage-instance}
 {: faq}
 
-[Configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#project-input-values) to use an existing {{site.data.keyword.cos_short}} instance by entering the {{site.data.keyword.cos_full_notm}} [CRN](#x9494304){: term} in the input field `existing_cos_instance_id` and set `create_cos_instance` to `false`. See the [{{site.data.keyword.cos_short}} configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cos-billing-exports-config) for more details.
+[Configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#project-input-values) to use an existing {{site.data.keyword.cos_short}} instance by entering the {{site.data.keyword.cos_full_notm}} [CRN](#x9494304){: term} in the input field `existing_cos_instance_id` and set `create_cos_instance` to `false`. See the [{{site.data.keyword.cos_short}} configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cos-billing-exports-config) for more details.
 
 ## How to use an existing Key Protect instance?
 {: #existing-key-protect-instance}
 {: faq}
 
-[Configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#project-input-values) to use an existing Key Protect instance by entering the instance ID in the input field `existing_kms_instance_guid` and set `create_key_protect_instance` to `false`. See the [configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cos-bucket-encryption-config) for more details.
+[Configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#project-input-values) to use an existing Key Protect instance by entering the instance ID in the input field `existing_kms_instance_guid` and set `create_key_protect_instance` to `false`. See the [configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cos-bucket-encryption-config) for more details.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -20,13 +20,13 @@ subcollection: track-spend-with-cloudability
 If you experience an issue or have questions about deploying {{site.data.keyword.IBM_notm}} Cloudability Enablement, you can use the following resources before you open a support case.
 {: shortdesc}
 
-* Review the [FAQs](#faqs) in the deployment guide.
-* Review the [troubleshooting documentation](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-troubleshoot) to troubleshoot and resolve common issues.
+* Review the [FAQs](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs) in the deployment guide.
+* Review the [troubleshooting documentation](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ts-deploy-failed) to troubleshoot and resolve common issues.
 * ![{{site.data.keyword.cloud_notm}} icon](../icons/ibm-cloud-16.svg "{{site.data.keyword.cloud_notm}} icon") Check the status of the {{site.data.keyword.cloud_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
-* ![GitHub icon](../icons/logo-github-16.svg "GitHub icon") Review the [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-apptio-cloudability-onboarding){: external} to see whether other users experienced the same problem.
+* ![GitHub icon](../icons/logo-github-16.svg "GitHub icon") Review the [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-cloudability-onboarding){: external} to see whether other users experienced the same problem.
 
 
-If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/get-support?topic=get-support-open-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
+If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/account?topic=account-open-case&interface=ui). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
 
 ## Providing support case details
 {: #support-case-details}

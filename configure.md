@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -17,8 +17,8 @@ subcollection: track-spend-with-cloudability
 
 The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) requires two parameters to run:
 
-1. An {{site.data.keyword.cloud_notm}} IAM API key with permissions to run the deployable architecture
-2. An {{site.data.keyword.IBM_notm}} Cloudability API Key to add the {{site.data.keyword.cloud_notm}} Account to Cloudability
+1.  An {{site.data.keyword.cloud_notm}} IAM API key with permissions to run the deployable architecture
+2.  An {{site.data.keyword.IBM_notm}} Cloudability API Key to add the {{site.data.keyword.cloud_notm}} Account to Cloudability
 
 See [setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning) for information about these parameters and how to create them.
 
@@ -76,7 +76,7 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 
 
 ### Billing exports
-{: #cos-billing-exports-config}
+{: #billing-exports-config}
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -48,7 +48,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 2. Creates the following services in the target resource group and location:
     - {{site.data.keyword.cos_full_notm}} Bucket in a newly created or existing {{site.data.keyword.cos_full_notm}} Instance
     - {{site.data.keyword.keymanagementserviceshort}} encryption key which is used for [encryption of a Object Storage bucket](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) with your own key using a newly created or existing {{site.data.keyword.keymanagementserviceshort}} instance
-3. [Enables daily billing report exports](/docs/billing-usage?topic=billing-usage-exporting-your-usage&interface=ui#enable-export-usage) to the newly created storage bucket
+3. [Enables daily billing report exports](/docs/account?topic=account-exporting-your-usage&interface=ui#enable-export-usage) to the newly created storage bucket
 4. Grants Cloudability access to read the billing reports from the {{site.data.keyword.cos_full_notm}} bucket
     - *If the account is an enterprise*: Grants Cloudability access to read the list of child accounts in the enterprise
     - Cloudability access is controlled with a custom role so only the minimum access is given.
@@ -57,4 +57,4 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 ## Getting Started
 {: #getting-started}
 
-If you don't have access to an {{site.data.keyword.IBM_notm}} Cloudability account then you can will need to [create one](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability). Once you have access to a Cloudability account, then [configure access to run the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning), and [deploy the cloud resources](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
+If you don't have access to an {{site.data.keyword.IBM_notm}} Cloudability account then you can will need to [create one](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-accessing-cloudability). Once you have access to a Cloudability account, then [configure access to run the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning), and [deploy the cloud resources](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).

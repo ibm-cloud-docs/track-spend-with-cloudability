@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-13"
 
 keywords:
 
@@ -25,7 +25,7 @@ Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA requires a
 ### Before you begin
 {: #cloudability-api-key-before-you-begin}
 
-Ensure that your Cloudability user has an `Administrator` role so that it has sufficient permissions to add vendor accounts to Cloudability. If you don't have access to a Cloudability account, then visit the guide on [accessing your Cloudability account](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability).
+Ensure that your Cloudability user has an `Administrator` role so that it has sufficient permissions to add vendor accounts to Cloudability. If you don't have access to a Cloudability account, then visit the guide on [accessing your Cloudability account](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-accessing-cloudability).
 
 Create your API Key as a functional user (for example: `cloudability-integration`) with access to add cloud vendors.
 {: recommend}
@@ -64,7 +64,7 @@ If you have the following access, you can create access credentials to run the D
 
 
 ### Required policies
-{: #iam-before-you-begin}
+{: #required-policies}
 
 Add the access policies to an [access group](/docs/account?topic=account-groups) rather than directly adding the policies to your DA operator (trusted profile, user, or service ID.).
 {: recommend}
@@ -76,7 +76,7 @@ The following access policies are necessary to run the DA.
 | `{{site.data.keyword.cos_full_notm}}` | `Administrator` | `Writer`, `ObjectReader` | The `Writer` role is needed to create/delete and configure a bucket in a {{site.data.keyword.cos_short}} instance. The `Administrator` role is needed to create the iam policy, which grants {{site.data.keyword.cloud_notm}} access to read the billing reports in the bucket and to create the service authorization between Billing and {{site.data.keyword.cos_full_notm}}. `ObjectReader` is needed to read the list of objects in the bucket in order to validate that billing reports are added to the bucket. |
 | `{{site.data.keyword.keymanagementserviceshort}}` | `Editor` | `Manager` | Used to create a key and key ring in a {{site.data.keyword.keymanagementserviceshort}} instance for bucket encryption. |
 | `Billing` | `Administrator` | N/A | Used to configure account billing exports to the {{site.data.keyword.cos_full_notm}} bucket |
-| `IAM Access Management` | `Administrator` | N/A | 1. Create custom iam roles for least privileged access for {{site.data.keyword.IBM_notm}} Cloudability.<br /> 2. Create service authorizations between {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}} and between Billing and {{site.data.keyword.cos_full_notm}}.<br /> 3. Ability to grant policies to the Cloudability service ID to read the billing reports from the bucket. |
+| `IAM Access Management` | `Administrator` | N/A | 1. Create custom iam roles for least privileged access for {{site.data.keyword.IBM_notm}} Cloudability.\n 2. Create service authorizations between {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}} and between Billing and {{site.data.keyword.cos_full_notm}}.\n 3. Ability to grant policies to the Cloudability service ID to read the billing reports from the bucket. |
 | `Enterprise` | `Administrator` | N/A | Only for enterprise accounts. Used to manage the iam policy for {{site.data.keyword.IBM_notm}} Cloudability to view the list of child accounts. |
 | `All Account Management` | `Administrator` | N/A | Only if the DA is creating a new Resource Group to provision resources. `Administrator` is needed (as opposed to the `Editor` role) to delete the resource group in the event of deprovisioning. Alternatively resources can be placed in an existing resource group in which case access needs to be granted to that resource group. See [giving access to resources in resource groups](/docs/account?topic=account-rgs_manage_access&interface=ui) for more details. |
 {: caption="Table 1. Access Policies" caption-side="bottom"}
@@ -85,7 +85,7 @@ The following access policies are necessary to run the DA.
 {: #access-groups}
 
 1. [Create an access group](/docs/account?topic=account-groups&interface=ui#create_ag)
-2. Assign the access policies from [Table 1](#required-policies) to the access group.
+2. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) to the access group.
 3. Add the Operator (user, service ID, trusted profile) as a [member of the access group](/docs/account?topic=account-groups&interface=ui#add-users-ag).
 4. Create an API Key if the Operator is a [user](/docs/account?topic=account-userapikey&interface=ui) or [service ID](/docs/account?topic=account-serviceidapikeys&interface=ui). Alternatively use [{{site.data.keyword.IBM_notm}} Secrets Manager to manage the IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials&interface=ui) of your service ID.
 
@@ -98,8 +98,8 @@ It is recommended to store any user or service [API keys in Secrets Manager](/do
 
 1. [Create a Project](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
 2. [Create a Trusted Profile for the Project](/docs/secure-enterprise?topic=secure-enterprise-tp-project#create-projects-tp)
-3. Assign the access policies from [Table 1](#required-policies) and the [trusted profile policies needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-create-trusted-profile&interface=ui#tp-access) to the trusted profile.
-4. Copy the [the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project&q=trusted+profile&tags=secure-enterprise#find-tp-id) for the next step to [deploy the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud)
+3. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) and the [trusted profile policies needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-create-trusted-profile&interface=ui#tp-access) to the trusted profile.
+4. Copy the [the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#find-tp-id) for the next step to [deploy the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud)
 
 ## Next steps
 {: #planning-next-steps}
