@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-15"
 
 keywords:
 
@@ -61,3 +61,16 @@ Open a support case to request that as much as a year of [historical billing dat
 {: faq}
 
 [Configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#project-input-values) to use an existing Key Protect instance by entering the instance ID in the input field `existing_kms_instance_guid` and set `create_key_protect_instance` to `false`. See the [configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cos-bucket-encryption-config) for more details.
+
+## What permissions does Cloudability need to integrate with my account?
+{: #what-access-for-cloudability}
+{: faq}
+
+Only the minimum required access is granted to Cloudability to access the billing data within the account. This is controlled using [iam custom roles](/docs/account?topic=account-custom-roles&interface=ui&q=iam+custom+roles&tags=account). The privileges granted to these custom roles include:
+
+
+| Service Name | Permissions | Reason |
+|------|-------------|-------------|
+| {{site.data.keyword.cos_full_notm}} | * iam.policy.read \n * cloud-object-storage.object.head \n * cloud-object-storage.object.get_uploads \n * cloud-object-storage.object.get \n * cloud-object-storage.bucket.list_bucket_crn \n * cloud-object-storage.bucket.head \n * cloud-object-storage.bucket.get | To list the objects in the bucket and to read the contents of the billing report files.|
+| IBM Enterprise | * iam.policy.read \n * enterprise.account.retrieve \n * enterprise.account-group.retrieve | For enterprise accounts only. Used to read the names of the child accounts and account groups within the enterprise account. |
+{: caption="Table 1. Cloudability access permissions" caption-side="bottom"}
