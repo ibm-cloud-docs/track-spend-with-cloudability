@@ -2,7 +2,7 @@
   "version": 2,
   "title": "IBM Cloudability Enablement",
   "introduction": "Connect your IBM Cloud Account or Enterprise to IBM Cloudability and start tracking your IBM Cloud spend with the rest of your cloud service providers.",
-  "deployment_url": "https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-cloudability-1b3dcf22-f451-4443-b885-01ba1847443c-global",
+  "deployment_url": "https://cloud.ibm.com/catalog/cda5c842-ca01-468e-9614-0be561a792dc/architecture/deploy-arch-ibm-cloudability-1b3dcf22-f451-4443-b885-01ba1847443c-global",
   "section_topics": {
     "links": [
       {
@@ -25,8 +25,8 @@
   },
   "section_architectures": [
     {
-      "title": "Overview",
-      "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-overview",
+      "title": "Architecture",
+      "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability-enablement",
       "deployable": true
     }
   ],

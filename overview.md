@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-20"
 
 keywords:
 
@@ -54,7 +54,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
     - Cloudability access is controlled with a custom role so only the minimum access is given.
 5. Adds the {{site.data.keyword.cloud_notm}} account or enterprise to {{site.data.keyword.IBM_notm}} Cloudability
 
-## Getting Started
+## Getting started
 {: #getting-started}
 
 If you don't have access to an {{site.data.keyword.IBM_notm}} Cloudability account then you can will need to [create one](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-accessing-cloudability). Once you have access to a Cloudability account, then [configure access to run the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning), and [deploy the cloud resources](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).

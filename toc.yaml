@@ -25,6 +25,11 @@ toc:
       - topic: release-notes.md
         navtitle: Release notes
   - navgroup:
+      id: architecture
+      topics:
+      - include: ../deployable-reference-architectures/terraform-ibm-cloudability-onboarding/cloudability-enablement.md
+        navtitle: Cloudability Enablement Architecture
+  - navgroup:
       id: plan
       topics:
         - topic: cloudability.md
