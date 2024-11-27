@@ -66,6 +66,7 @@ toc:
           label: Troubleshooting Deployment
           topics:
             - topic: troubleshoot-cloudability-account-conflict.md
+            - topic: troubleshoot-cloudability-500-error.md
             - topic: troubleshoot-cloudability-iam-role-conflict.md
             - topic: troubleshoot-iam-policy-conflict.md
             - topic: troubleshoot-no-data-in-cloudability.md

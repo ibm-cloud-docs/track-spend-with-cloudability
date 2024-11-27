@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-27"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -18,10 +18,10 @@ content-type: troubleshoot
 {: #troubleshoot-iam-role-conflict}
 {: troubleshoot}
 
-The iam custom roles with the same names and policies already exist in the {{site.data.keyword.cloud_notm}} account.
+The iam custom roles with the same names and policies exist in the {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
-The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with the following error message in the schematics logs:
+The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with a similar error message in the schematics logs:
 {: tsSymptoms}
 
 ```log
@@ -83,9 +83,9 @@ with module.cloudability_bucket_access.ibm_iam_custom_role.cos_custom_role[0],
 {: pre}
 
 
-This is often because the {{site.data.keyword.cloud_notm}} account already contains custom roles by the same name and with the same policies. This may have been caused by a separate deployment of the Cloudability deployable architecture or from the Cloudability provided terraform script.
+This error is often because the {{site.data.keyword.cloud_notm}} account contains custom roles by the same name and with the same policies. A separate deployment of the Cloudability deployable architecture or the Cloudability provided terraform script may have created these custom roles in the account.
 {: tsCauses}
 
 
-The recommended approach is to delete the iam custom roles [manually from the iam roles UI](/iam/roles) or by running `Destroy resources` option from within {{site.data.keyword.IBM}} Projects of the the terraform workspace. Once destroyed, [re-run the Cloudability deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui#deploy-config-copy) to re-create the custom iam roles under the current project.
+The recommended approach is to manually delete the iam custom roles from the [iam roles UI](/iam/roles) or by running the `Destroy resources` option within {{site.data.keyword.IBM}} Projects. Once destroyed, [re-run the Cloudability deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui#deploy-config-copy) to re-create the custom iam roles under the current project.
 {: tsResolve}

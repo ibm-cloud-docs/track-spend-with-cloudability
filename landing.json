@@ -23,6 +23,14 @@
       }
     ]
   },
+  "section_highlights": [
+    {
+      "title": "Cloudability for IBM Cloud - FAQ",
+      "description": "Announcement of the beta release of the integration with IBM Cloud.",
+      "href": "https://community.ibm.com/community/user/apptio/blogs/apptio-community-member/2024/08/30/cloudability-for-ibm-cloud-cost-management-faq",
+      "type": "blog"
+    }
+  ],
   "section_architectures": [
     {
       "title": "Architecture",

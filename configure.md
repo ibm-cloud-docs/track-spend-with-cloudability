@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -22,14 +22,12 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 
 See [setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning) for information about these parameters and how to create them.
 
-Use this guide as a configuration reference to customize your DA deployment.
-
 ## Supported regions
 {: #regions}
 
 The DA supports deployment to any of the available [{{site.data.keyword.keymanagementserviceshort}} regions](/docs/key-protect?topic=key-protect-regions). Your {{site.data.keyword.keymanagementserviceshort}} instance and {{site.data.keyword.cos_short}} bucket are created in the same region. The default region is `us-south`.
 
-It is recommended to use one of the three [{{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) (us-south, jp-tok, and eu-de) to avoid any service disruptions.
+IBM Cloud recommends using one of the three [{{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) (us-south, jp-tok, and eu-de) to avoid any service disruptions.
 {: recommend }
 
 
@@ -42,8 +40,8 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `is_enterprise_account` | Whether the account being added to Cloudability is the primary account within an enterprise. The `ibmcloud_api_key` should be created within the primary enterprise account | `bool` | `false` |
-| `enterprise_id` | The ID of the enterprise. If `__NULL__` then it is automatically retrieved if `is_enterprise_account` is `true`. Providing this value reduces the access policies that are required to run the DA. | `string` | `__NULL__` |
+| `is_enterprise_account` | Whether the account corresponding to the `ibmcloud_api_key` is an enterprise account and, if so, is the primary account within the enterprise. | `bool` | `false` |
+| `enterprise_id` | The ID of the enterprise. If `__NULL__` then it is automatically retrieved if `is_enterprise_account` is `true`. Providing this value reduces the access policies that are necessary to run the DA. | `string` | `__NULL__` |
 {: caption="Table 1. Enterprise Account Parameters" caption-side="bottom"}
 
 ### {{site.data.keyword.IBM_notm}} Cloudability configurations
@@ -52,7 +50,7 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `cloudability_host` | {{site.data.keyword.IBM_notm}} Cloudability host name as described in https://help.apptio.com/en-us/cloudability/api/v3/getting_started_with_the_cloudability.htm#authentication | `string` | `"api.cloudability.com"` |
-| `skip_verification` | Whether to verify the account after the account is added to Cloudability. This step is not strictly necessary for adding the account to Cloudability | `bool` | `false` |
+| `skip_verification` | Whether to verify that the IBM Cloud account is successfully integrated with Cloudability. This step is not strictly necessary for adding the account to Cloudability | `bool` | `false` |
 {: caption="Table 2. {{site.data.keyword.IBM_notm}} Cloudability Configurations" caption-side="bottom"}
 
 
@@ -61,8 +59,8 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `use_existing_resource_group` | Whether the value of `resource_group_name` input should be a new or an existing resource group | `bool` | `true` |
-| `resource_group_name` | The name of a new or existing resource group where resources will be created | `string` | `"Default"` |
+| `use_existing_resource_group` | Whether the value of `resource_group_name` input is a new (true) or an existing (false) resource group | `bool` | `false` |
+| `resource_group_name` | The name of a new or existing resource group where resources will be created | `string` | `cloudability-enablement` |
 {: caption="Table 3. Resource Group" caption-side="bottom"}
 
 ### Tagging
@@ -91,8 +89,8 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `existing_cos_instance_id` | The ID of an existing {{site.data.keyword.cos_full_notm}} instance. | `string` | `__NULL__` |
-| `cos_instance_name` | The name of the newly created {{site.data.keyword.cos_full_notm}} instance which contains the billing reports bucket. Only used if `existing_cos_instance_id` is not defined. | `string` | `"ibm-cloudability"` |
-| `bucket_name` | Name to the {{site.data.keyword.cos_short}} bucket where billing reports are stored. | `string` | `"apptio-cldy-billing-snapshots"` |
+| `cos_instance_name` | The name of the newly created {{site.data.keyword.cos_full_notm}} instance which contains the billing reports bucket. Only used if `existing_cos_instance_id` is not defined. | `string` | `"billing-report-exports"` |
+| `bucket_name` | Name to the {{site.data.keyword.cos_short}} bucket where billing reports are stored. | `string` | `billing-reports` |
 | `add_bucket_name_suffix`. | Add a random 4 character suffix to the `bucket_name` to ensure global uniqueness. | `bool` | `true` |
 | `cos_plan` | Plan to be used for creating {{site.data.keyword.cos_full_notm}} instance. Only used if `existing_cos_instance_id` is not defined. | `string` | `"One Rate"` |
 | `bucket_storage_class` | The storage class of the newly provisioned {{site.data.keyword.cos_short}} bucket. | `string` | `"standard"` |
@@ -108,9 +106,10 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `existing_kms_instance_guid` | The GUID of the {{site.data.keyword.keymanagementserviceshort}} instance. | `string` | `__NULL__` |
-| `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance name used for bucket encryption | `string` | `"cloudability-bucket-encryption"` |
-| `key_ring_name` | Name of the key ring to group keys | `string` | `"bucket-encryption"` |
-| `key_name` | Name of the encryption key for the Object Storage bucket | `string` | `cldy-bucket-key` |
+| `skip_iam_authorization_policy` | Whether to skip the creation of an IAM authorization policy that permits the Object Storage instance to read the encryption key from the Key Protect instance. WARNING: An authorization policy must exist before an encrypted bucket can be created. | `boolean` | `false` |
+| `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance which stores the Object Storage encryption key. Not needed if `existing_kms_instance_guid` is used. | `string` | `"cloudability-bucket-encryption"` |
+| `key_ring_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key ring to store the Object Storage encryption key. | `string` | `"bucket-encryption"` |
+| `key_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key for encryption of the Object Storage bucket. If `__NULL__` then the name of the Object Storage bucket is used instead. | `string` | `__NULL__` |
 {: caption="Table 7. Bucket Encryption with {{site.data.keyword.keymanagementserviceshort}}" caption-side="bottom"}
 
 ### Bucket audit events
@@ -129,8 +128,8 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `monitoring_crn` | The CRN of an {{site.data.keyword.cloud_notm}} Monitoring instance where {{site.data.keyword.cos_short}} bucket metrics are sent. If no value is passed, metrics are sent to the instance associated with the Metrics Router service configuration. | `string` | `__NULL__` |
-| `request_metrics_enabled` | If set to `true`, all {{site.data.keyword.cos_short}} bucket request metrics will be sent to the monitoring service. | `boolean` | `true` |
-| `usage_metrics_enabled` | If set to `true`, all {{site.data.keyword.cos_short}} bucket usage metrics will be sent to the monitoring service. | `boolean` | `true` |
+| `request_metrics_enabled` | If set to `true`, all {{site.data.keyword.cos_short}} bucket request metrics are sent to the monitoring service. | `boolean` | `true` |
+| `usage_metrics_enabled` | If set to `true`, all {{site.data.keyword.cos_short}} bucket usage metrics are sent to the monitoring service. | `boolean` | `true` |
 {: caption="Table 8. Bucket metrics" caption-side="bottom"}
 
 ### IAM inputs
@@ -138,6 +137,6 @@ It is recommended to use one of the three [{{site.data.keyword.keymanagementserv
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `cloudability_custom_role_name` | name of the custom role, that is used to grant the Cloudability service ID read access to the billing reports within the Object Storage bucket | `string` | `"CloudabilityStorageCustomRole"` |
-| `cloudability_enterprise_custom_role_name` | name of the custom role to grant access to a Cloudability service ID to read the enterprise information. Only used of `is_enterprise_account` is set. | `string` | `"CloudabilityListAccCustomRole"` |
+| `cloudability_iam_custom_role_name` | name of the custom role that is used to grant the Cloudability service ID read access to the billing reports within the Object Storage bucket | `string` | `"CloudabilityStorageCustomRole"` |
+| `cloudability_iam_enterprise_custom_role_name` | name of the custom role to grant access to a Cloudability service ID to read the enterprise information. Only used of `is_enterprise_account` is set. | `string` | `"CloudabilityListAccCustomRole"` |
 {: caption="Table 9. IAM inputs" caption-side="bottom"}

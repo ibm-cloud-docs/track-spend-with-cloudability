@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -23,13 +23,13 @@ content-type: release-note
 
 
 
-Use these release notes to learn about the latest updates to {{site.data.keyword.IBM_notm}} Cloudability Enablement, which are grouped by release date. Release notes are available for a minimum of three years.
+Use these release notes to learn about the latest updates to the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture. Each release is grouped by the date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
-## November 2024
+## December 2024
 {: #subcollection-nov2024}
 
-### 15 Nov 2024
+### 13 Dec 2024
 {: #subcollection-xxnov2024}
 {: initial-release}
 

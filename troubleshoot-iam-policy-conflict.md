@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-27"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -14,14 +14,14 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do I see a `policy_conflict_error` in the logs when adding my account to Cloudability?
+# Why do I see a `policy_conflict_error` in the logs after deploying the Cloudability Enablement DA?
 {: #troubleshoot-iam-policy-conflict}
 {: troubleshoot}
 
-The policy already exists, which may have been created by another run of the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA or the Cloudability provided terraform.
+The policy being created exists in the ibm cloud account before deployment. The existing policy may have been created by another run of the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA or the Cloudability provided terraform.
 {: shortdesc}
 
-The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with the following error message in the schematics logs:
+The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with a similar error message in the schematics logs:
 {: tsSymptoms}
 
 ```log
@@ -98,10 +98,10 @@ operation: create
 ```
 {: pre}
 
-This is because the IAM policies that grant Cloudability access to the {{site.data.keyword.cos_short}} bucket has already exist.
+This error is due to the IAM policies that grant Cloudability access to the {{site.data.keyword.cos_short}} bucket existing in the IBM Cloud account.
 {: tsCauses}
 
-The recommended approach is to delete the existing policy and re-run the DA configuration to add the account. This ensures that the vendor credentials within Cloudability are set correctly.
+The recommended approach is to delete the existing policy and re-run the DA configuration to add the account. Deleting and re-creating the policy ensures that the vendor credentials within Cloudability are set correctly and managed by the project.
 {: tsResolve}
 
 These policies are not visible from the {{site.data.keyword.cloud_notm}} platform UI since the service ID exists in a different account. Instead, the policy needs to be deleted that uses the {{site.data.keyword.cloud_notm}} CLI or API. To delete the policy, use the following steps:
@@ -117,7 +117,7 @@ You need the `Administrator` role for `IAM Access Management` to be able to dele
     ```
     {: pre}
 
-3. Delete the policies granted to the Cloudability Service ID by issuing the following command and replacing `POLICY_ID` with the ID's listed from the previous step.
+3. Delete the policies granted to the Cloudability Service ID by issuing the following command and replacing `POLICY_ID` with the ID's from the output of the previous step.
 
     ```bash
     ibmcloud iam service-policy-delete ServiceId-6bf7af4e-6f07-4894-ab72-ff539dfb951a POLICY_ID

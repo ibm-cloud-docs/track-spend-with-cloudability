@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -16,7 +16,7 @@ subcollection: track-spend-with-cloudability
 # Setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA
 {: #planning}
 
-Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA requires authorization from the {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.IBM_notm}} Cloudability api key. Follow the instructions in this guide to help create and manage these keys.
+Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA requires authorization from the {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.IBM_notm}} Cloudability api key. Follow these instructions to help create and manage your api keys.
 {: shortdesc}
 
 ## Cloudability api key
@@ -35,14 +35,14 @@ Create your API Key as a functional user (for example: `cloudability-integration
 
 The Cloudability API key for the logged in user can be retrieved from the [cloudability account preferences](https://app.apptio.com/cloudability#/settings/preferences). Use the following steps to create your [API key](#x8051010){: term}:
 
-1. Log in to to your [Cloudability account](https://frontdoor.apptio.com/login/)).
-2. Navigate to the `Settings` menu by clicking the profile icon in the upper right corner.
+1. Log in to your [Cloudability account](https://frontdoor.apptio.com/login/)).
+2. Click the profile icon in the upper right corner to navigate to the `Settings` page.
 3. Select `Manage Profile`.
 4. Select the `Preferences` tab to reveal the Cloudability API on the right.
 5. If an API Key is not viewable, click `Enable Access` to reveal the API Key.
 6. Copy and securely store the API Key for the next step of [configuring the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
 
-Securely store your API Key in [{{site.data.keyword.cloud_notm}} Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as an arbitrary key. This makes it easier to rotate the API key and allows it to be referenced in [{{site.data.keyword.IBM}} Projects](/docs/secure-enterprise?topic=secure-enterprise-project-faqs#project-log-issue) without exposing the key in your DA configurations.
+Securely store your API Key in [{{site.data.keyword.cloud_notm}} Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as an arbitrary key. Secrets Manager makes it easier to rotate the API key and allows it to be referenced in [{{site.data.keyword.IBM}} Projects](/docs/secure-enterprise?topic=secure-enterprise-project-faqs#project-log-issue) without exposing the key in your DA configurations.
 {: recommend}
 
 ## Configuring {{site.data.keyword.cloud_notm}} IAM permissions
@@ -50,7 +50,7 @@ Securely store your API Key in [{{site.data.keyword.cloud_notm}} Secrets Manager
 
 Authorization needs to be granted to either a trusted profile, user, or service ID which is referred to as an operator. This operator is [associated with the Project](/docs/secure-enterprise?topic=secure-enterprise-authorize-project) so that it has the permissions to run the Cloudability deployable architecture.
 
-Enterprise accounts only need to configure IAM credentials in the primary Enterprise account to allow {{site.data.keyword.IBM_notm}} Cloudability access to billing reports for all current and future accounts within the {{site.data.keyword.cloud_notm}} Enterprise. It is unnecessary to independently add each account within the enterprise.
+For enterprise accounts the IAM credentials only need to be configured in the primary Enterprise account to allow {{site.data.keyword.IBM_notm}} Cloudability to access billing reports for all current and future accounts within the {{site.data.keyword.cloud_notm}} Enterprise. It is unnecessary to independently add each account within the enterprise.
 {: important}
 
 ### Before you begin
@@ -89,7 +89,7 @@ The following access policies are necessary to run the DA.
 3. Add the Operator (user, service ID, trusted profile) as a [member of the access group](/docs/account?topic=account-groups&interface=ui#add-users-ag).
 4. Create an API Key if the Operator is a [user](/docs/account?topic=account-userapikey&interface=ui) or [service ID](/docs/account?topic=account-serviceidapikeys&interface=ui). Alternatively use [{{site.data.keyword.IBM_notm}} Secrets Manager to manage the IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials&interface=ui) of your service ID.
 
-It is recommended to store any user or service [API keys in Secrets Manager](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui). This allows credentials to be easily rotated and allows the project to reference the api credentials without exposing them to any users who are permitted to manage or run the project.
+It is recommended to store any user or service [API keys in Secrets Manager](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui). Secrets manager allows you to easily rotate credentials and prevents exposing highly privileged credentials to any users who are responsible for the running and management of the project used to run the DA.
 {: recommend}
 
 
@@ -98,7 +98,7 @@ It is recommended to store any user or service [API keys in Secrets Manager](/do
 
 1. [Create a Project](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
 2. [Create a Trusted Profile for the Project](/docs/secure-enterprise?topic=secure-enterprise-tp-project#create-projects-tp)
-3. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) and the [trusted profile policies needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-create-trusted-profile&interface=ui#tp-access) to the trusted profile.
+3. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) and the [trusted profile policies that are needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-create-trusted-profile&interface=ui#tp-access) to the trusted profile.
 4. Copy the [the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#find-tp-id) for the next step to [deploy the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud)
 
 ## Next steps

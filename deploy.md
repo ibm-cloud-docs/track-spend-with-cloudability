@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-27"
 
 keywords:
 
@@ -15,13 +15,13 @@ subcollection: track-spend-with-cloudability
 # Deploying with {{site.data.keyword.cloud_notm}} projects
 {: #deploy-cloud}
 
-{{site.data.keyword.cloud_notm}} Projects are designed with infrastructure as code and compliance in mind to help ensure that your infrastructure is managed, secure, and always compliant. For more information, see [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
+Deploying with {{site.data.keyword.cloud_notm}} Projects ensures that your infrastructure is managed, secure, and always compliant by using infrastructure as code (IaC) and integrated compliance tools. For more information, see [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
 
 
 ## Before you begin
 {: #required-access-for-projects}
 
-Ensure that you have [created iam credentials](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning) to authorize the project deployment and have the permissions to create a project in the desired account. This includes the following access:
+Ensure that you created [iam credentials](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning) to authorize the project deployment and have the permissions to create a project in the desired account. These access permissions include:
 
 - The Editor role on the Projects service
 - The Editor and Manager role on the {{site.data.keyword.bpshort}} service
@@ -47,7 +47,7 @@ Complete the following steps to run the Cloudability Enablement DA with {{site.d
     5.  Save the configuration.
     6.  Click `Validate`. Validation takes a few minutes.
 
-        {{site.data.keyword.cloud_notm}} Projects runs an Security and Compliance Center (SCC) scan against the {{site.data.keyword.cloud_notm}} for Financial Services profile. Controls that are part of the DA and that are also supported by {{site.data.keyword.cloud_notm}} Projects are checked. Only controls that are included in the list of supported {{site.data.keyword.compliance_short}} rules are checked when you validate the configuration.
+        {{site.data.keyword.cloud_notm}} Projects run a Security and Compliance Center (SCC) scan against the {{site.data.keyword.cloud_notm}} for Financial Services profile. Controls that are part of the DA and are included in the list of supported {{site.data.keyword.compliance_short}} rules are checked when you validate the configuration.
 {: important}
 
 5.  Deploy the configuration. After you validate your configuration, you can deploy it to your target account:
@@ -65,4 +65,4 @@ During the validation and deployment process, monitor the [needs attention items
 ## Next Steps
 {: #deploy-next-steps}
 
-Congratulations your {{site.data.keyword.cloud_notm}} account should now be added to Cloudability. Your billing data from your account should appear in Cloudability within 24 hours. You can also [request that historical data for the past year be added to your bucket](/docs/account?topic=account-exporting-your-usage&interface=ui#access-historical-data). If you experience any issues during the validation stage, consult the [getting help and support guide](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support).
+Congratulations your {{site.data.keyword.cloud_notm}} account should now be added to Cloudability. Your billing data from your account should appear in Cloudability within 24 hours. You can also request that up to a year of [historical data be added to your bucket](/docs/account?topic=account-exporting-your-usage&interface=ui#access-historical-data). If you experience any issues during the validation stage, consult the [getting help and support guide](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support).

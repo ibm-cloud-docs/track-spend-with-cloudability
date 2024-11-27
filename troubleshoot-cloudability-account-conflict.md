@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-27"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -14,14 +14,14 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do I see conflict Cloudability account conflict in the logs after running the DA?
+# Why do I see a Cloudability account conflict in the deployment logs of the DA?
 {: #troubleshoot-cldy-account-conflict}
 {: troubleshoot}
 
-The {{site.data.keyword.cloud_notm}} account has already been added to the Cloudability account.
+The conflict is because the {{site.data.keyword.cloud_notm}} account exists in the Cloudability account prior to deployment.
 {: shortdesc}
 
-The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with the following error message in the schematics logs:
+The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with a similar error message in the schematics logs:
 {: tsSymptoms}
 
 ```log
@@ -34,10 +34,10 @@ Error: unexpected response code '409': {"error":{"status":409,"code":"conflict",
 {: pre}
 
 
-This is often because the {{site.data.keyword.cloud_notm}} account has already been added to Cloudability, either manually or by another deployment of the DA.
+This error is often because the {{site.data.keyword.cloud_notm}} account exists in Cloudability. The existing integration could have been added manually or by another deployment of the DA.
 {: tsCauses}
 
-The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the DA configuration to add the account. This ensures that the vendor credentials within Cloudability are set correctly.
+The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the DA configuration to add the account. Deploying through the DA ensures that the vendor credentials within Cloudability are set correctly.
 {: tsResolve}
 
-Alternatively, the existing configuration can be manually updated within Cloudability to match the configuration outputs and the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability can be disabled by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`.
+Alternatively, the existing configuration can be manually updated within Cloudability to match the configuration outputs and the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability can be disabled by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was already added from the previous run.

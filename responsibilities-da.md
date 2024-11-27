@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-27"
 
 subcollection: track-spend-with-cloudability
 
@@ -40,13 +40,13 @@ Review the following sections for the specific responsibilities for you and for 
 
 Incident and operations management includes tasks such as monitoring, event management, high availability, problem determination, recovery, and full state backup and recovery.
 
-in addition to the general [incident and operations management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#incident-and-ops-da) when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities listed in Table 1.
+In addition to the general [incident and operations management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#incident-and-ops-da) that apply when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 1.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-|Configuring Activity tracker audit logging| Provide the [activity tracker configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#bucket-audit-events), which are enabled by default | Review and disable these configurations as desired and [configure a target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs) to view the logs |
+|Configuring Activity tracker audit logging| Provide the [Activity Tracker configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#bucket-audit-events), which are enabled by default | Review and disable these configurations as desired and [configure a target](/docs/atracker?topic=atracker-getting-started-target-cloud-logs) to view the logs |
 |Configuring Monitoring |Provide the [monitoring configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#bucket-metrics), which are enabled by default | 1. Review and disable these configurations as desired. \n 2. Configure a [metrics target](/docs/metrics-router?topic=metrics-router-target-manage&interface=ui). |
-|Key Project failover| Support configuration of {{site.data.keyword.keymanagementserviceshort}} failover regions for {{site.data.keyword.cos_full_notm}} encryption | Selecting one of the [supported {{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) when [configuring the region](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#regions) of the deployed infrastructure if {{site.data.keyword.keymanagementserviceshort}} failover support if needed. |
+|Key Project failover| Support configuration of {{site.data.keyword.keymanagementserviceshort}} failover regions for {{site.data.keyword.cos_full_notm}} encryption | If {{site.data.keyword.keymanagementserviceshort}} failover support is needed, then select one of the [supported {{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) when [selecting a region](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#regions) to deploy your infrastructure. |
 {: row-headers}
 {: caption="Table 1: Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -71,7 +71,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA does not identify 
 
 Identity and access management includes tasks such as authentication, authorization, access control policies, and approving, granting, and revoking access.
 
-In addition to the general [identity and access management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#iam-responsibilities-da) when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities listed in Table 2.
+In addition to the general [identity and access management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#iam-responsibilities-da) that apply when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 2.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
@@ -90,11 +90,11 @@ In addition to the general [identity and access management responsibilities](/do
 
 Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
 
-In addition to the general [security and regulation compliance responsibilities](https://test.cloud.ibm.com/docs-draft/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#security-compliance-da) when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities listed in Table 3.
+In addition to the general [security and regulation compliance responsibilities](https://test.cloud.ibm.com/docs-draft/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#security-compliance-da) that apply when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 3.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Meet security and compliance objectives | Provide a secure DA that complies with declared standards. For more information about data security, see "[How do I know that my data is safe?](/docs/overview?topic=overview-security)". | |
+| Meet security and compliance objectives | Provide a secure DA that complies with declared standards. For more information about data security, see "[How do I know that my data is safe?](/docs/overview?topic=overview-security)" | |
 | Verify configuration changes | | Understand the effects on the security and compliance posture of any user-initiated changes to the default configuration. Run {{site.data.keyword.compliance_long}} checks if needed to ensure that the DA remains in compliance. |
 {: row-headers}
 {: caption="Table 3: Responsibilities for security and regulation compliance" caption-side="bottom"}
@@ -106,6 +106,6 @@ In addition to the general [security and regulation compliance responsibilities]
 
 
 
-Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
+Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provisioning disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
 
 The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA does not identify specific responsibilities in this area. For information about the general Business Continuity and Disaster Recovery (BCDR) responsibilities when you use {{site.data.keyword.IBM_notm}} deployable architectures, see [Disaster recovery](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#disaster-recovery-da).
