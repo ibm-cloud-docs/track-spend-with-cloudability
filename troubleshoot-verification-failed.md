@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-03"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -34,10 +34,10 @@ Error: after 20 attempts, last error: verification was not successful: [error] -
 {: pre}
 
 
-The most likely cause is that the changes are not fully set in Cloudability. This issue occurs more commonly when an account is removed from Cloudability and then re-added.
+Despite what the error message indicates, if the deployment reached this step then the permissions to pull the cost data are in place. The most likely cause of this error is that the billing files are not in place yet. This issue occurs more commonly when an account is removed from Cloudability and then re-added.
 {: tsCauses}
 
-The issue can often be resolved by just performing the account verification later. Account verification can be done manually within the [Cloudability vendor credentials](https://app.apptio.com/cloudability#/credentials/ibm) or by redeploying the configuration.
+The issue can often be resolved by performing the account verification later. Account verification can be done manually within the [Cloudability vendor credentials](https://app.apptio.com/cloudability#/credentials/ibm) or by redeploying the configuration.
 {: tsResolve}
 
 Alternatively, account verification can be disabled in the DA configuration since it is not an essential step for the deployment. In the `Optional` settings of the configuration, set `skip_verification` to `true` and then re-run the deployment.

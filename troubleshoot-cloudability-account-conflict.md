@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -37,7 +37,7 @@ Error: unexpected response code '409': {"error":{"status":409,"code":"conflict",
 This error is often because the {{site.data.keyword.cloud_notm}} account exists in Cloudability. The existing integration could have been added manually or by another deployment of the DA.
 {: tsCauses}
 
-The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the DA configuration to add the account. Deploying through the DA ensures that the vendor credentials within Cloudability are set correctly.
+The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the DA configuration to add the account. Deploying through the DA ensures that the vendor configurations  are set correctly within Cloudability.
 {: tsResolve}
 
 Alternatively, the existing configuration can be manually updated within Cloudability to match the configuration outputs and the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability can be disabled by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was already added from the previous run.

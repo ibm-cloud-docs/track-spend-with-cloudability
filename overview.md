@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 keywords:
 
@@ -40,7 +40,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA performs the neces
 ## What actions does this deployable architecture (DA) perform?
 {: #what-actions}
 
-![Architectural Diagram](../deployable-reference-architectures/terraform-ibm-cloudability-onboarding/cloudability-all-inclusive-onboarding.svg){: caption="Figure 1. Architecture Diagram" caption-side="bottom"}
+![Architectural Diagram](../deployable-reference-architectures/terraform-ibm-cloudability-onboarding/cloudability-all-inclusive-onboarding.svg){: caption="Architecture Diagram" caption-side="bottom"}
 
 The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture performs the following steps to add your {{site.data.keyword.cloud_notm}} account to Cloudability:
 

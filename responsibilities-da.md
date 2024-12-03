@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 subcollection: track-spend-with-cloudability
 
@@ -48,7 +48,7 @@ In addition to the general [incident and operations management responsibilities]
 |Configuring Monitoring |Provide the [monitoring configuration variables](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#bucket-metrics), which are enabled by default | 1. Review and disable these configurations as desired. \n 2. Configure a [metrics target](/docs/metrics-router?topic=metrics-router-target-manage&interface=ui). |
 |Key Project failover| Support configuration of {{site.data.keyword.keymanagementserviceshort}} failover regions for {{site.data.keyword.cos_full_notm}} encryption | If {{site.data.keyword.keymanagementserviceshort}} failover support is needed, then select one of the [supported {{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) when [selecting a region](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#regions) to deploy your infrastructure. |
 {: row-headers}
-{: caption="Table 1: Responsibilities for incident and operations" caption-side="bottom"}
+{: caption="Responsibilities for incident and operations" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 
@@ -76,10 +76,10 @@ In addition to the general [identity and access management responsibilities](/do
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Secure with least privilege | Documenting and maintaining the [minimal IAM access requirements to run the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs). | Ensure that the DA operator (user, service ID, or trusted profile) is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs) |
-| Manage secrets | | * Generate the necessary secrets (IAM API keys) and configure trusted profiles that are needed to run the DA. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
-| {{site.data.keyword.cos_short}} Billing Report Access | Secure with Cloudability having only the [minimal required access by using iam custom roles](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs#what-access-for-cloudability). | Administrate access to the {{site.data.keyword.cos_full_notm}} bucket which contains the {{site.data.keyword.IBM_notm}} billing reports. |
+| Manage secrets | N/A | * Generate the necessary secrets (IAM API keys) and configure trusted profiles that are needed to run the DA. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
+| {{site.data.keyword.cos_short}} Billing Report Access | * Secure with Cloudability having only the [minimal required access by using iam custom roles](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs#what-access-for-cloudability). |
 {: row-headers}
-{: caption="Table 2: Responsibilities for identity and access management" caption-side="bottom"}
+{: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Security and regulation compliance
@@ -94,10 +94,10 @@ In addition to the general [security and regulation compliance responsibilities]
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Meet security and compliance objectives | Provide a secure DA that complies with declared standards. For more information about data security, see "[How do I know that my data is safe?](/docs/overview?topic=overview-security)" | |
-| Verify configuration changes | | Understand the effects on the security and compliance posture of any user-initiated changes to the default configuration. Run {{site.data.keyword.compliance_long}} checks if needed to ensure that the DA remains in compliance. |
+| Meet security and compliance objectives | Provide a secure DA that complies with declared standards. For more information about data security, see "[How do I know that my data is safe?](/docs/overview?topic=overview-security)" | N/A |
+| Verify configuration changes | N/A| Understand the effects on the security and compliance posture of any user-initiated changes to the default configuration. Run {{site.data.keyword.compliance_long}} checks if needed to ensure that the DA remains in compliance. |
 {: row-headers}
-{: caption="Table 3: Responsibilities for security and regulation compliance" caption-side="bottom"}
+{: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
 
 ## Disaster recovery

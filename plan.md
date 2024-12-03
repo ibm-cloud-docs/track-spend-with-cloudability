@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 keywords:
 
@@ -79,7 +79,7 @@ The following access policies are necessary to run the DA.
 | `IAM Access Management` | `Administrator` | N/A | 1. Create custom iam roles for least privileged access for {{site.data.keyword.IBM_notm}} Cloudability.\n 2. Create service authorizations between {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}} and between Billing and {{site.data.keyword.cos_full_notm}}.\n 3. Ability to grant policies to the Cloudability service ID to read the billing reports from the bucket. |
 | `Enterprise` | `Administrator` | N/A | Only for enterprise accounts. Used to manage the iam policy for {{site.data.keyword.IBM_notm}} Cloudability to view the list of child accounts. |
 | `All Account Management` | `Administrator` | N/A | Only if the DA is creating a new Resource Group to provision resources. `Administrator` is needed (as opposed to the `Editor` role) to delete the resource group in the event of deprovisioning. Alternatively resources can be placed in an existing resource group in which case access needs to be granted to that resource group. See [giving access to resources in resource groups](/docs/account?topic=account-rgs_manage_access&interface=ui) for more details. |
-{: caption="Table 1. Access Policies" caption-side="bottom"}
+{: caption="Access Policies" caption-side="bottom"}
 
 ### Using an access groups
 {: #access-groups}

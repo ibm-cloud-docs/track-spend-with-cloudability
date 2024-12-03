@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-03"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -42,6 +42,17 @@ This error is often because of an issue in the handling of the request to add th
 Sometimes the IBM Cloud account is successfully added to Cloudability even though an error was returned. So, first check whether the account was added within Cloudability on the [IBM vendor credentials page](https://app.apptio.com/cloudability#/credentials/ibm){: external}.
 {: tsResolve}
 
-If the account does exist, then the recommended approach is to delete the {{site.data.keyword.cloud_notm}} account from Cloudability and redeploy the DA configuration to add the account. Deploying through the DA ensures that the vendor credentials within Cloudability are set correctly. If the error still occurs, then the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability by using deployable architecture can be ignored by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was added in the previous run. If the issue continues, [open a case](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support) in the {{site.data.keyword.cloud_notm}} support center.
+If the account does exist, then the recommended approach is to delete the {{site.data.keyword.cloud_notm}} account from Cloudability and redeploy the DA configuration to add the account. Deploying through the DA ensures that the vendor configurations  are set correctly within Cloudability.
+
+If the deployment does not add the IBM Cloud account to Cloudability then the terraform state for adding the Cloudability account may already exist and needs to be removed. You can remove the state using the following IBM Cloud CLI command:
+
+```bash
+ibmcloud schematics workspace state rm --id $WORKSPACE_ID --address 'module.cloudability_onboarding[0].restapi_object.cloudability_ibm_account'
+```
+{: pre}
+
+The `$WORKSPACE_ID` is the ID of the workspace which can be viewed using `ibmcloud schematics workspace list`.
+
+If the error still occurs, then the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability by using deployable architecture can be ignored by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was added in the previous run. If the issue continues, [open a case](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support) in the {{site.data.keyword.cloud_notm}} support center.
 
 If the {{site.data.keyword.cloud_notm}} account is not visible within Cloudability, then [open a support case](https://www.ibm.com/mysupport/s/createrecord/NewCase) in [IBM Support](https://www.ibm.com/mysupport/s/).
