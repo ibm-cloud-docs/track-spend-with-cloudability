@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "title": "IBM Cloudability Enablement",
+  "introduction": "Connect your IBM Cloud Account or Enterprise to IBM Cloudability and start tracking your IBM Cloud spend with the rest of your cloud service providers.",
+  "deployment_url": "https://cloud.ibm.com/catalog/cda5c842-ca01-468e-9614-0be561a792dc/architecture/deploy-arch-ibm-cloudability-1b3dcf22-f451-4443-b885-01ba1847443c-global",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Overview",
+        "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-overview"
+      },
+      {
+        "title": "Configuring Access",
+        "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning"
+      },
+      {
+        "title": "Deploying with IBM Projects",
+        "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud"
+      },
+      {
+        "title": "Getting help",
+        "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Cloudability for IBM Cloud - FAQ",
+      "description": "Announcement of the beta release of the integration with IBM Cloud.",
+      "href": "https://community.ibm.com/community/user/apptio/blogs/apptio-community-member/2024/08/30/cloudability-for-ibm-cloud-cost-management-faq",
+      "type": "blog"
+    }
+  ],
+  "section_architectures": [
+    {
+      "title": "Architecture",
+      "href": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability-enablement",
+      "deployable": true
+    }
+  ],
+  "section_updates": {
+    "view_more": "/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-cloudability-relnotes"
+  }
+}

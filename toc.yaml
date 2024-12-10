@@ -1,0 +1,73 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs-internal/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: track-spend-with-cloudability
+    href: /docs/track-spend-with-cloudability
+    path: track-spend-with-cloudability
+    audience: solution
+    category: solution_docs
+    content-type: deployment
+    # industry: industry-value # Replace
+    use-case: FinOps
+    # compliance: compliance-value # Replace
+    deployable: true # Set to true if this is a deployment guide that's associated with a deployable architecture in the catalog
+    description: Connect your IBM Cloud Account or Enterprise to IBM Cloudability and start tracking your IBM Cloud expenses along with any other cloud service providers.
+    label: Cloudability Enablement
+  entries:
+  - navgroup:
+      id: overview
+      topics:
+      - topic: overview.md
+        navtitle: Overview
+      - topic: release-notes.md
+        navtitle: Release notes
+  - navgroup:
+      id: architecture
+      topics:
+      - include: ../deployable-reference-architectures/terraform-ibm-cloudability-onboarding/cloudability-enablement.md
+        navtitle: Cloudability Enablement Architecture
+  - navgroup:
+      id: plan
+      topics:
+        - topic: cloudability.md
+          navtitle: Creating IBM Cloudability
+  - navgroup:
+      id: deploy
+      topics:
+        - topic: plan.md
+          navtitle: Granting Access
+        - topic: configure.md
+          navtitle: Configuration Options
+        - topic: deploy.md
+          navtitle: Deploying
+  - navgroup:
+      id: reference
+      topics:
+        - topic: responsibilities-da.md
+          navtitle: Understanding your responsibilities
+  - navgroup:
+      id: help
+      topics:
+      - topic: get-help-da.md
+        navtitle: Getting help and support
+      - topic: faqs.md
+        navtitle: FAQs
+      - topicgroup:
+          label: Troubleshooting projects
+          topics:
+            - include: ../secure-enterprise/ts-needs-attention.md
+              navtitle: How do I address a failed validation?
+            - include: ../secure-enterprise/ts-deploy.md
+              navtitle: How do I address a failed deployment?
+      - topicgroup:
+          label: Troubleshooting Deployment
+          topics:
+            - topic: troubleshoot-cloudability-account-conflict.md
+            - topic: troubleshoot-cloudability-500-error.md
+            - topic: troubleshoot-cloudability-iam-role-conflict.md
+            - topic: troubleshoot-iam-policy-conflict.md
+            - topic: troubleshoot-no-data-in-cloudability.md
+            - topic: troubleshoot-verification-failed.md
