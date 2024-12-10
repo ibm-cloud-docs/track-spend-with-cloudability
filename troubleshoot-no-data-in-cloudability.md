@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-10"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -27,5 +27,5 @@ The Cloudability Enablement DA was successfully deployed, but you still don't se
 Cloudability is unable to communicate to the storage bucket.
 {: tsCauses}
 
-If the issue continues, [open a support case with Cloudability](https://www.ibm.com/mysupport/s/createrecord/NewCase) in [IBM Support](https://www.ibm.com/mysupport/s/).
+If the issue continues, [open a support case with Cloudability](https://www.ibm.com/mysupport/s/createrecord/NewCase) in [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/).
 {: tsResolve}

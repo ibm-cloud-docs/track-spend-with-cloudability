@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -27,7 +27,7 @@ See [setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA](/
 
 The DA supports deployment to any of the available [{{site.data.keyword.keymanagementserviceshort}} regions](/docs/key-protect?topic=key-protect-regions). Your {{site.data.keyword.keymanagementserviceshort}} instance and {{site.data.keyword.cos_short}} bucket are created in the same region. The default region is `us-south`.
 
-IBM Cloud recommends using one of the three [{{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) (us-south, jp-tok, and eu-de) to avoid any service disruptions.
+{{site.data.keyword.cloud_notm}} recommends using one of the three [{{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) (us-south, jp-tok, and eu-de) to avoid any service disruptions.
 {: recommend }
 
 ## Configuration options
@@ -48,7 +48,7 @@ IBM Cloud recommends using one of the three [{{site.data.keyword.keymanagementse
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `cloudability_host` | {{site.data.keyword.IBM_notm}} Cloudability host name as described in (https://help.apptio.com/en-us/cloudability/api/v3/getting%20started%20with%20the%20cloudability.htm) | `string` | `api.cloudability.com` |
-| `skip_verification` | Whether to verify that the IBM Cloud account is successfully integrated with Cloudability. This step is not strictly necessary for adding the account to Cloudability | `bool` | `false` |
+| `skip_verification` | Whether to verify that the {{site.data.keyword.cloud_notm}} account is successfully integrated with Cloudability. This step is not strictly necessary for adding the account to Cloudability | `bool` | `false` |
 {: caption="{{site.data.keyword.IBM_notm}} Cloudability Configurations" caption-side="bottom"}
 
 
@@ -104,12 +104,12 @@ IBM Cloud recommends using one of the three [{{site.data.keyword.keymanagementse
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `existing_kms_instance_guid` | The GUID of the {{site.data.keyword.keymanagementserviceshort}} instance. | `string` | `__NULL__` |
-| `skip_iam_authorization_policy` | Whether to skip the creation of an IAM authorization policy that permits the Object Storage instance to read the encryption key from the Key Protect instance. WARNING: An authorization policy must exist before an encrypted bucket can be created. | `boolean` | `false` |
+| `skip_iam_authorization_policy` | Whether to skip the creation of an IAM authorization policy that permits the Object Storage instance to read the encryption key from the {{site.data.keyword.keymanagementserviceshort}} instance. WARNING: An authorization policy must exist before an encrypted bucket can be created. | `boolean` | `false` |
 | `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance which stores the Object Storage encryption key. Not needed if `existing_kms_instance_guid` is used. | `string` | `cloudability-bucket-encryption` |
 | `key_ring_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key ring to store the Object Storage encryption key. | `string` | `bucket-encryption` |
 | `use_existing_key_ring` | Whether the `key_ring_name` corresponds to an existing key ring or a new key ring for storing the encryption key. | `boolean` | `false` |
 | `key_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key for encryption of the Object Storage bucket. If `__NULL__` then the name of the Object Storage bucket is used instead. | `string` | `__NULL__` |
-| `kms_rotation_enabled` | If set to true, Key Protect enables a rotation policy on the Key Protect instance. Only used if 'create_key_protect_instance' is true. | `boolean` | `false` |
+| `kms_rotation_enabled` | If set to true, {{site.data.keyword.keymanagementserviceshort}} enables a rotation policy on the {{site.data.keyword.keymanagementserviceshort}} instance. Only used if 'create_key_protect_instance' is true. | `boolean` | `false` |
 | `kms_rotation_interval_month` | Specifies the number of months for the encryption key to be rotated.. Must be between 1 and 12 inclusive. | `number` | `1` |
 {: caption="Bucket Encryption with {{site.data.keyword.keymanagementserviceshort}}" caption-side="bottom"}
 
@@ -128,7 +128,7 @@ IBM Cloud recommends using one of the three [{{site.data.keyword.keymanagementse
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `monitoring_crn` | The CRN of an {{site.data.keyword.cloud_notm}} Monitoring instance where {{site.data.keyword.cos_short}} bucket metrics are sent. If no value is passed, metrics are sent to the instance associated with the Metrics Router service configuration. | `string` | `__NULL__` |
+| `monitoring_crn` | The CRN of an {{site.data.keyword.mon_short}} instance where {{site.data.keyword.cos_short}} bucket metrics are sent. If no value is passed, metrics are sent to the instance associated with the Metrics Router service configuration. | `string` | `__NULL__` |
 | `request_metrics_enabled` | If set to `true`, all {{site.data.keyword.cos_short}} bucket request metrics are sent to the monitoring service. | `boolean` | `true` |
 | `usage_metrics_enabled` | If set to `true`, all {{site.data.keyword.cos_short}} bucket usage metrics are sent to the monitoring service. | `boolean` | `true` |
 {: caption="Bucket metrics" caption-side="bottom"}

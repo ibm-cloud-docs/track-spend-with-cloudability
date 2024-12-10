@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-10"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -98,7 +98,7 @@ operation: create
 ```
 {: pre}
 
-This error is due to the IAM policies that grant Cloudability access to the {{site.data.keyword.cos_short}} bucket existing in the IBM Cloud account.
+This error is due to the IAM policies that grant Cloudability access to the {{site.data.keyword.cos_short}} bucket existing in the {{site.data.keyword.cloud_notm}} account.
 {: tsCauses}
 
 The recommended approach is to delete the existing policy and re-run the DA configuration to add the account. Deleting and re-creating the policy ensures that the vendor credentials within Cloudability are set correctly and managed by the project.

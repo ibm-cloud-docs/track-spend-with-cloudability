@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-10"
 
 subcollection: track-spend-with-cloudability
 
@@ -40,7 +40,7 @@ Review the following sections for the specific responsibilities for you and for 
 
 Incident and operations management includes tasks such as monitoring, event management, high availability, problem determination, recovery, and full state backup and recovery.
 
-In addition to the general [incident and operations management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#incident-and-ops-da) that apply when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 1.
+In addition to the general [incident and operations management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#incident-and-ops-da) that apply when using {{site.data.keyword.IBM_notm}} deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 1.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
@@ -71,7 +71,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA does not identify 
 
 Identity and access management includes tasks such as authentication, authorization, access control policies, and approving, granting, and revoking access.
 
-In addition to the general [identity and access management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#iam-responsibilities-da) that apply when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 2.
+In addition to the general [identity and access management responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#iam-responsibilities-da) that apply when using {{site.data.keyword.IBM_notm}} deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 2.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
@@ -90,7 +90,7 @@ In addition to the general [identity and access management responsibilities](/do
 
 Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
 
-In addition to the general [security and regulation compliance responsibilities](https://test.cloud.ibm.com/docs-draft/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#security-compliance-da) that apply when using IBM deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 3.
+In addition to the general [security and regulation compliance responsibilities](https://test.cloud.ibm.com/docs-draft/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#security-compliance-da) that apply when using {{site.data.keyword.IBM_notm}} deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 3.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
