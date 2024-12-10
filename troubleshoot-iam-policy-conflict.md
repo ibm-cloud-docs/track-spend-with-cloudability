@@ -106,7 +106,7 @@ The recommended approach is to delete the existing policy and re-run the DA conf
 
 These policies are not visible from the {{site.data.keyword.cloud_notm}} platform UI since the service ID exists in a different account. Instead, the policy needs to be deleted that uses the {{site.data.keyword.cloud_notm}} CLI or API. To delete the policy, use the following steps:
 
-You need the `Administrator` role for `IAM Access Management` to be able to delete the policies.
+You need the **Administrator** role for `IAM Access Management` to be able to delete the policies.
 {: important }
 
 1. Log in to the {{site.data.keyword.cloud_notm}} [CLI](#x2051424){: term} and select the corresponding account where the policy conflict exists.

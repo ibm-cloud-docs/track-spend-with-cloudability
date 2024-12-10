@@ -40,7 +40,7 @@ To ensure that the {{site.data.keyword.cloud_notm}} support team can start inves
 
 1. From your Schematics log, provide the architecture name, source URL, and version.
 
-    a. In the {{site.data.keyword.cloud_notm}} console, go to `Schematics` > `Workspaces` > **deployable architecture instance**.
+    a. In the {{site.data.keyword.cloud_notm}} console, go to **Schematics** > **Workspaces** > **deployable architecture instance**.
 
     b. Copy and paste into the case details the portion of the log that provides the architecture information. The following contents is an example of the case details which can be copied from the schematics logs:
 
@@ -50,7 +50,7 @@ To ensure that the {{site.data.keyword.cloud_notm}} support team can start inves
 
 2. From your project, provide the Terraform Log Analyzer summary.
    a. In the {{site.data.keyword.cloud_notm}} console, go to **your project** > **Configurations** > **deployable architecture instance**.
-   b. Depending on where you are in your deployment process go to `View validation results` or `View last deployment`. Take a screenshot of the results and add it to your support case.
+   b. Depending on where you are in your deployment process go to **View validation results** or **View last deployment**. Take a screenshot of the results and add it to your support case.
 
 ## Routing your support case expeditiously
 {: #support-case-routing}

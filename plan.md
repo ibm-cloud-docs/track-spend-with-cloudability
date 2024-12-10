@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-10"
 
 keywords:
 
@@ -25,9 +25,9 @@ Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA requires a
 ### Before you begin
 {: #cloudability-api-key-before-you-begin}
 
-Ensure that your Cloudability user has an `Administrator` role so that it has sufficient permissions to add vendor accounts to Cloudability. If you don't have access to a Cloudability account, then visit the guide on [accessing your Cloudability account](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-accessing-cloudability).
+Ensure that your Cloudability user has an **Administrator** role so that it has sufficient permissions to add vendor accounts to Cloudability. If you don't have access to a Cloudability account, then visit the guide on [accessing your Cloudability account](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-accessing-cloudability).
 
-Create your API Key as a functional user (for example: `cloudability-integration`) with access to add cloud vendors.
+Create your API Key as a functional user (for example: **cloudability-integration**) with access to add cloud vendors.
 {: recommend}
 
 ### Acquiring the Cloudability api key
@@ -36,10 +36,10 @@ Create your API Key as a functional user (for example: `cloudability-integration
 The Cloudability API key for the logged in user can be retrieved from the [cloudability account preferences](https://app.apptio.com/cloudability#/settings/preferences). Use the following steps to create your [API key](#x8051010){: term}:
 
 1. Log in to your [Cloudability account](https://frontdoor.apptio.com/login/)).
-2. Click the profile icon in the upper right corner to navigate to the `Settings` page.
-3. Select `Manage Profile`.
-4. Select the `Preferences` tab to reveal the Cloudability API on the right.
-5. If an API Key is not viewable, click `Enable Access` to reveal the API Key.
+2. Click the profile icon in the upper right corner to navigate to the **Settings** page.
+3. Select **Manage Profile**.
+4. Select the **Preferences** tab to reveal the Cloudability API on the right.
+5. If an API Key is not viewable, click **Enable Access** to reveal the API Key.
 6. Copy and securely store the API Key for the next step of [configuring the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
 
 Securely store your API Key in [{{site.data.keyword.cloud_notm}} Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as an arbitrary key. Secrets Manager makes it easier to rotate the API key and allows it to be referenced in [{{site.data.keyword.IBM}} Projects](/docs/secure-enterprise?topic=secure-enterprise-project-faqs#project-log-issue) without exposing the key in your DA configurations.

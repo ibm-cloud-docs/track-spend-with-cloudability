@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-27"
+lastupdated: "2024-12-10"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -87,5 +87,5 @@ This error is often because the {{site.data.keyword.cloud_notm}} account contain
 {: tsCauses}
 
 
-The recommended approach is to manually delete the iam custom roles from the [iam roles UI](/iam/roles) or by running the `Destroy resources` option within {{site.data.keyword.IBM}} Projects. Once destroyed, [re-run the Cloudability deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui#deploy-config-copy) to re-create the custom iam roles under the current project.
+The recommended approach is to manually delete the iam custom roles from the [iam roles UI](/iam/roles) or by running the **Destroy resources** option within {{site.data.keyword.IBM}} Projects. Once destroyed, [re-run the Cloudability deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-deploy-project&interface=ui#deploy-config-copy) to re-create the custom iam roles under the current project.
 {: tsResolve}

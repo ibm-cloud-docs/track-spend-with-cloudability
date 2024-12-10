@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-10"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -40,6 +40,6 @@ Despite what the error message indicates, if the deployment reached this step th
 The issue can often be resolved by performing the account verification later. Account verification can be done manually within the [Cloudability vendor credentials](https://app.apptio.com/cloudability#/credentials/ibm) or by redeploying the configuration.
 {: tsResolve}
 
-Alternatively, account verification can be disabled in the DA configuration since it is not an essential step for the deployment. In the `Optional` settings of the configuration, set `skip_verification` to `true` and then re-run the deployment.
+Alternatively, account verification can be disabled in the DA configuration since it is not an essential step for the deployment. In the **Optional** settings of the configuration, set `skip_verification` to **true** and then re-run the deployment.
 
 If it takes more than 24 hours and the account cannot be verified then [request help](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support).

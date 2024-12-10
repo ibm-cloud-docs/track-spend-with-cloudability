@@ -53,6 +53,6 @@ ibmcloud schematics workspace state rm --id $WORKSPACE_ID --address 'module.clou
 
 The `$WORKSPACE_ID` is the ID of the workspace which can be viewed using `ibmcloud schematics workspace list`.
 
-If the error still occurs, then the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability by using deployable architecture can be ignored by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was added in the previous run. If the issue continues, [open a case](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support) in the {{site.data.keyword.cloud_notm}} support center.
+If the error still occurs, then the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability by using deployable architecture can be ignored by setting the `cloudability_api_key` parameter in the **Required** tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was added in the previous run. If the issue continues, [open a case](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-help-and-support) in the {{site.data.keyword.cloud_notm}} support center.
 
 If the {{site.data.keyword.cloud_notm}} account is not visible within Cloudability, then [open a support case](https://www.ibm.com/mysupport/s/createrecord/NewCase) in [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/).
