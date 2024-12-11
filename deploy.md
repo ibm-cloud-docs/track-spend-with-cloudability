@@ -3,7 +3,6 @@
 copyright:
   years: 2024
 lastupdated: "2024-12-11"
-
 keywords:
 
 subcollection: track-spend-with-cloudability
