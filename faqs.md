@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords:
 
@@ -26,7 +26,7 @@ content-type: faq
 Review the FAQs for {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture. To view all FAQs for {{site.data.keyword.cloud}}, see the [FAQ library](/docs/faqs).
 {: shortdesc}
 
-## How does the Cloudability access {{site.data.keyword.cloud_notm}} billing data?
+## How does Cloudability access {{site.data.keyword.cloud_notm}} billing data?
 {: #how-does-cloudability-access-my-billing-data}
 {: faq}
 
