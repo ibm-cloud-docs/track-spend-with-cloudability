@@ -2,7 +2,8 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
+
 
 keywords:
 
@@ -13,7 +14,8 @@ subcollection: track-spend-with-cloudability
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA
+
+# Setting up {{site.data.keyword.IBM_notm}} Cloudability Enablement DA
 {: #planning}
 
 Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA requires authorization from the {{site.data.keyword.cloud_notm}} account and an {{site.data.keyword.IBM_notm}} Cloudability api key. Follow these instructions to help create and manage your api keys.
@@ -30,7 +32,8 @@ Ensure that your Cloudability user has an **Administrator** role so that it has 
 Create your API Key as a functional user (for example: **cloudability-integration**) with access to add cloud vendors.
 {: recommend}
 
-### Acquiring the Cloudability api key
+
+### Acquiring a Cloudability api key
 {: #acquiring-api-key}
 
 The Cloudability API key for the logged in user can be retrieved from the [cloudability account preferences](https://app.apptio.com/cloudability#/settings/preferences). Use the following steps to create your [API key](#x8051010){: term}:

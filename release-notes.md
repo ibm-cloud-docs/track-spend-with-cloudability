@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords:
 
@@ -46,15 +46,15 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 
 | Terraform Provider | Version  |
 | :----------------- | :------- |
-| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | >=1.71.0 |
-| [Mastercard/restapi](https://registry.terraform.io/providers/Mastercard/restapi/latest) | 1.20.0               |
-| [skyscrapr/terraform-provider-cloudability](https://registry.terraform.io/providers/skyscrapr/cloudability/latest) | 0.0.40               |
+| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.71.0` |
+| [Mastercard/restapi](https://registry.terraform.io/providers/Mastercard/restapi/latest) | `1.20.0`               |
+| [skyscrapr/terraform-provider-cloudability](https://registry.terraform.io/providers/skyscrapr/cloudability/latest) | `0.0.40`               |
 {: caption="Terraform provider dependencies" caption-side="bottom"}
 
 
 | Terraform Modules | Version  |
 | :----------------- | :------- |
-| [terraform-ibm-modules/resource-group/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/resource-group/ibm/latest)      | >=1.1.6 |
-| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | >=8.15.2 |
-| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | >=4.17.1 |
+| [terraform-ibm-modules/resource-group/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/resource-group/ibm/latest)      | `>=1.1.6` |
+| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=8.15.2` |
+| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=4.17.1` |
 {: caption="Terraform modules" caption-side="bottom"}

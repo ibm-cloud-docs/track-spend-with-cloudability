@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-11"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: track-spend-with-cloudability
 # Overview
 {: #overview}
 
-The {{site.data.keyword.IBM_notm}} Cloudability Enablement [deployable architecture](#x10293733){: term} is the easiest way to add your {{site.data.keyword.cloud_notm}} account or [enterprise](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise) to {{site.data.keyword.IBM_notm}} Cloudability (formally Apptio Cloudability). With your {{site.data.keyword.cloud_notm}} account added to Cloudability, you can use it to track and analyze your {{site.data.keyword.cloud_notm}} expenses.
+The {{site.data.keyword.IBM_notm}} Cloudability Enablement [deployable architecture](#x10293733){: term} is the easiest way to add your {{site.data.keyword.cloud_notm}} account or [enterprise](/docs/enterprise-management?topic=enterprise-management-what-is-enterprise) to {{site.data.keyword.IBM_notm}} Cloudability (formerly Apptio Cloudability). With your {{site.data.keyword.cloud_notm}} account added to Cloudability, you can use it to track and analyze your {{site.data.keyword.cloud_notm}} expenses.
 {: shortdesc}
 
 ## What is {{site.data.keyword.IBM_notm}} Cloudability?
