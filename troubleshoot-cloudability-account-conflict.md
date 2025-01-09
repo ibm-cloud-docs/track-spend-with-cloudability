@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-03"
+  years: 2025
+lastupdated: "2025-01-09"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -18,7 +18,7 @@ content-type: troubleshoot
 {: #troubleshoot-cldy-account-conflict}
 {: troubleshoot}
 
-The conflict is because the {{site.data.keyword.cloud_notm}} account exists in the Cloudability account prior to deployment.
+The conflict is because the {{site.data.keyword.cloud_notm}} account exists in the Cloudability account before deployment.
 {: shortdesc}
 
 The deployment of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture failed with a similar error message in the schematics logs:
@@ -40,4 +40,6 @@ This error is often because the {{site.data.keyword.cloud_notm}} account exists 
 The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the DA configuration to add the account. Deploying through the DA ensures that the vendor configurations  are set correctly within Cloudability.
 {: tsResolve}
 
-Alternatively, the existing configuration can be manually updated within Cloudability to match the configuration outputs and the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability can be disabled by setting the `cloudability_api_key` parameter in the `Required` tab to `__NULL__`. Next, redeploy the deployable architecture which skips the adding of the account to Cloudability since it was already added from the previous run.
+Alternatively, the existing configuration can be manually updated within Cloudability to match the configuration outputs and the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability through the deployable architecture can be disabled.
+Before version `1.0.21` this is done by setting the `cloudability_api_key` parameter in the **Required** tab to `__NULL__`. After version `1.1.0` set the `cloudability_auth_type` parameter in the **Required** tab to `Manual`. Next, redeploy the deployable architecture, which skips the adding of the account to Cloudability since it was added in the previous run.
+Next, redeploy the deployable architecture, which skips the adding of the account to Cloudability since it was already added from the previous run.

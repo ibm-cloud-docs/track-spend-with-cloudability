@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-10"
+  years: 2025
+lastupdated: "2025-01-09"
 
 keywords:
 
@@ -47,8 +47,13 @@ The DA supports deployment to any of the available [{{site.data.keyword.keymanag
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
+| `cloudability_auth_type` | Select Cloudability authentication mode. Options are:\n\n* `none`: no connection to Cloudability\n* `manual`: manually enter in the credentials in the Cloudability UI\n* `api_key`: use Cloudability API Keys\n* `frontdoor`: Frontdoor Access Administration | `string` | `none` |
+| `cloudability_api_key` | Cloudability API Key used to authenticate with Cloudability to add the IBM Cloud account to the Cloudability environment. See [how to retrieve your Cloudability API key](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#api-key) or visit the [Cloudability preferences page](https://app.apptio.com/cloudability#/settings/preferences). Required if `cloudability_auth_type` is set to `api_key`. | `string` | `__NULL__` |
+| `frontdoor_public_key` | The public key that is used along with the `frontdoor_secret_key` to authenticate requests to Cloudability. Only required if `cloudability_auth_type` is `frontdoor`. See [acquiring an Access Administration API key](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#frontdoor-api-key) for steps to create your credentials. | `string` | `__NULL__` |
+| `frontdoor_secret_key` | The secret key that is used along with the `frontdoor_public_key` to authenticate requests to Cloudability. Only required if `cloudability_auth_type` is `frontdoor`.  See [acquiring an Access Administration API key](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#frontdoor-api-key) for steps to create your credentials. | `string` | `__NULL__` |
+| `cloudability_environment_id` | An ID corresponding to the Cloudability environment. Only required if `cloudability_auth_type` is `frontdoor`. | `string` | `__NULL__` |
 | `cloudability_host` | {{site.data.keyword.IBM_notm}} Cloudability host name as described in (https://help.apptio.com/en-us/cloudability/api/v3/getting%20started%20with%20the%20cloudability.htm) | `string` | `api.cloudability.com` |
-| `skip_verification` | Whether to verify that the {{site.data.keyword.cloud_notm}} account is successfully integrated with Cloudability. This step is not strictly necessary for adding the account to Cloudability | `bool` | `false` |
+| `skip_verification` | Whether to verify that the {{site.data.keyword.cloud_notm}} account is successfully integrated with Cloudability. This step is not strictly necessary for adding the account to Cloudability. Only applicable when `cloudability_auth_type` is `api_key`. | `bool` | `false` |
 {: caption="{{site.data.keyword.IBM_notm}} Cloudability Configurations" caption-side="bottom"}
 
 
@@ -87,7 +92,7 @@ The DA supports deployment to any of the available [{{site.data.keyword.keymanag
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `existing_cos_instance_id` | The ID of an existing {{site.data.keyword.cos_full_notm}} instance. | `string` | `__NULL__` |
-| `cos_instance_name` | The name of the newly created {{site.data.keyword.cos_full_notm}} instance which contains the billing reports bucket. Only used if `existing_cos_instance_id` is not defined. | `string` | `billing-report-exports` |
+| `cos_instance_name` | The name of the newly created {{site.data.keyword.cos_full_notm}} instance, which contains the billing reports bucket. Only used if `existing_cos_instance_id` is not defined. | `string` | `billing-report-exports` |
 | `bucket_name` | Name to the {{site.data.keyword.cos_short}} bucket where billing reports are stored. | `string` | `billing-reports` |
 | `add_bucket_name_suffix`. | Add a random 4 character suffix to the `bucket_name` to ensure global uniqueness. | `bool` | `true` |
 | `cos_plan` | Plan to be used for creating {{site.data.keyword.cos_full_notm}} instance. Only used if `existing_cos_instance_id` is not defined. | `string` | `One Rate` |
@@ -105,7 +110,7 @@ The DA supports deployment to any of the available [{{site.data.keyword.keymanag
 |------|-------------|------|---------|
 | `existing_kms_instance_guid` | The GUID of the {{site.data.keyword.keymanagementserviceshort}} instance. | `string` | `__NULL__` |
 | `skip_iam_authorization_policy` | Whether to skip the creation of an IAM authorization policy that permits the Object Storage instance to read the encryption key from the {{site.data.keyword.keymanagementserviceshort}} instance. WARNING: An authorization policy must exist before an encrypted bucket can be created. | `boolean` | `false` |
-| `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance which stores the Object Storage encryption key. Not needed if `existing_kms_instance_guid` is used. | `string` | `cloudability-bucket-encryption` |
+| `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance, which stores the Object Storage encryption key. Not needed if `existing_kms_instance_guid` is used. | `string` | `cloudability-bucket-encryption` |
 | `key_ring_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key ring to store the Object Storage encryption key. | `string` | `bucket-encryption` |
 | `use_existing_key_ring` | Whether the `key_ring_name` corresponds to an existing key ring or a new key ring for storing the encryption key. | `boolean` | `false` |
 | `key_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key for encryption of the Object Storage bucket. If `__NULL__` then the name of the Object Storage bucket is used instead. | `string` | `__NULL__` |

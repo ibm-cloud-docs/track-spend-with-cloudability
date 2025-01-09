@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-10"
+  years: 2025
+lastupdated: "2025-01-09"
 
 subcollection: track-spend-with-cloudability
 
@@ -76,7 +76,7 @@ In addition to the general [identity and access management responsibilities](/do
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Secure with least privilege | Documenting and maintaining the [minimal IAM access requirements to run the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs). | Ensure that the DA operator (user, service ID, or trusted profile) is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs) |
-| Manage secrets | N/A | * Generate the necessary secrets (IAM API keys) and configure trusted profiles that are needed to run the DA. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
+| Manage secrets | N/A | * Generate the necessary secrets (IAM and Cloudability API keys) and configure trusted profiles that are needed to run the DA. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
 | {{site.data.keyword.cos_short}} Billing Report Access | * Secure with Cloudability having only the [minimal required access by using iam custom roles](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs#what-access-for-cloudability). |
 {: row-headers}
 {: caption="Responsibilities for identity and access management" caption-side="bottom"}
