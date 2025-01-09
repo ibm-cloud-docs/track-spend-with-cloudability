@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-11"
-
+  years: 2025
+lastupdated: "2025-01-09"
 
 keywords:
 
@@ -13,7 +12,6 @@ subcollection: track-spend-with-cloudability
 
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Setting up {{site.data.keyword.IBM_notm}} Cloudability Enablement DA
 {: #planning}
@@ -31,7 +29,6 @@ Ensure that your Cloudability user has an **Administrator** role so that it has 
 
 Create your API Key as a functional user (for example: **cloudability-integration**) with access to add cloud vendors.
 {: recommend}
-
 
 ### Acquiring a Cloudability api key
 {: #acquiring-api-key}

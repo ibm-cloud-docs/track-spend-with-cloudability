@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-10"
+  years: 2025
+lastupdated: "2025-01-09"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
