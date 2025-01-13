@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-11"
+  years: 2025
+lastupdated: "2025-01-13"
 
 keywords:
 
@@ -30,7 +30,7 @@ Review the FAQs for {{site.data.keyword.IBM_notm}} Cloudability Enablement deplo
 {: #how-does-cloudability-access-my-billing-data}
 {: faq}
 
-{{site.data.keyword.IBM_notm}} Cloudability accesses your account billing data by using [billing exports](https://test.cloud.ibm.com/docs/account?topic=account-exporting-your-usage&interface=ui) to a Object Storage bucket. This deployable architecture creates the access policies to an {{site.data.keyword.IBM_notm}} Cloudability owned service ID to be able to read the data in this bucket. Only the bare minimum access is granted to {{site.data.keyword.IBM_notm}} Cloudability.
+{{site.data.keyword.IBM_notm}} Cloudability accesses your account billing data by using [billing exports](/docs/account?topic=account-exporting-your-usage&interface=ui) to a Object Storage bucket. This deployable architecture creates the access policies to an {{site.data.keyword.IBM_notm}} Cloudability owned service ID to be able to read the data in this bucket. Only the bare minimum access is granted to {{site.data.keyword.IBM_notm}} Cloudability.
 
 ## How long until {{site.data.keyword.cloud_notm}} billing data is visible in Cloudability?
 {: #how-long-until-I-see-my-data}
@@ -47,7 +47,7 @@ By default, the current month of {{site.data.keyword.cloud_notm}} billing report
 ## Can I configure immutable storage on the {{site.data.keyword.cos_full_notm}} bucket?
 {: #why-no-immutable-storage}
 
-No, [immutable storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable) of objects is not a supported feature of [billing exports](https://test.cloud.ibm.com/docs/account?topic=account-exporting-your-usage&interface=ui) to Object Storage. Billing exports updates a manifest file, which is what Cloudability reads. The updating of objects is not allowed when immutable storage is enabled.
+No, [immutable storage](/docs/cloud-object-storage?topic=cloud-object-storage-immutable) of objects is not a supported feature of [billing exports](/docs/account?topic=account-exporting-your-usage&interface=ui) to Object Storage. Billing exports updates a manifest file, which is what Cloudability reads. The updating of objects is not allowed when immutable storage is enabled.
 
 
 ## How to use an existing {{site.data.keyword.cos_full_notm}} instance?

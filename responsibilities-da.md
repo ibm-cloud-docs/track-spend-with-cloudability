@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-13"
 
 subcollection: track-spend-with-cloudability
 
@@ -90,7 +90,7 @@ In addition to the general [identity and access management responsibilities](/do
 
 Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
 
-In addition to the general [security and regulation compliance responsibilities](https://test.cloud.ibm.com/docs-draft/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#security-compliance-da) that apply when using {{site.data.keyword.IBM_notm}} deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 3.
+In addition to the general [security and regulation compliance responsibilities](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#security-compliance-da) that apply when using {{site.data.keyword.IBM_notm}} deployable architectures, the Cloudability Enablement deployable architecture includes the responsibilities that are listed in Table 3.
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|

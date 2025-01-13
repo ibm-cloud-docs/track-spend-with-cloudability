@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-01-13"
 
 keywords:
 
@@ -28,7 +28,7 @@ Authentication to {{site.data.keyword.IBM_notm}} Cloudability is not required to
 The Cloudability Enablement DA supports two types of authentication to Cloudability:
 
 1. [Cloudability API key](#acquiring-api-key) (simpler)
-2. [Access Administration API key](#frontdoor-open-token) (more secure)
+2. [Access Administration API key](#frontdoor-api-key) (more secure)
 
 You must use the Access Administration API key approach to authenticate with Cloudability if you are using a GovCloud Cloudability environment.
 {: notice}
@@ -133,7 +133,7 @@ It is recommended to store any user or service [API keys in Secrets Manager](/do
 
 1. [Create a Project](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
 2. [Create a Trusted Profile for the Project](/docs/secure-enterprise?topic=secure-enterprise-tp-project#create-projects-tp)
-3. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) and the [trusted profile policies that are needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-create-trusted-profile&interface=ui#tp-access) to the trusted profile.
+3. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) and the [trusted profile policies that are needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-tp-project#create-projects-tp) to the trusted profile.
 4. Copy the [the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#find-tp-id) for the next step to [deploy the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud)
 
 ## Next steps
