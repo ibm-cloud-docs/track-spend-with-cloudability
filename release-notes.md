@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-02-28"
 
 keywords:
 
@@ -26,6 +26,26 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture. Each release is grouped by the date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
+## February 2025
+{: #subcollection-feb2025}
+
+### 28 Feb 2025
+{: #subcollection-28feb2025}
+
+Version 1.1.4 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) is available
+:
+- Updated [terraform-ibm-modules/cos/ibm](https://github.com/terraform-ibm-modules/terraform-ibm-cos/tree/main) to version 8.19.3 which uses the new COS bucket terraform resource `ibm_cos_lifecycle_configuration`. This removes the deprecation error message.
+
+> Warning: Argument is deprecated
+>
+>   with module.cos_bucket.module.cos_bucket.ibm_cos_bucket.cos_bucket[0],
+>   on .terraform/modules/cos_bucket.cos_bucket/main.tf line 133, in > resource "ibm_cos_bucket" "cos_bucket":
+>  133: resource "ibm_cos_bucket" "cos_bucket" {
+>
+> Use the ibm_cos_bucket_lifecycle_configuration resource instead
+
+- Updated [IBM-Cloud terraform provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) to 1.75.2.
+- Updated required terraform version to ">= 1.9.0".
 
 ## January 2025
 {: #subcollection-jan2025}
@@ -78,7 +98,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 
 | Terraform Provider | Version  |
 | :----------------- | :------- |
-| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.73.0` |
+| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.75.2` |
 | [Mastercard/restapi](https://registry.terraform.io/providers/Mastercard/restapi/latest) | `1.20.0`               |
 | [skyscrapr/terraform-provider-cloudability](https://registry.terraform.io/providers/skyscrapr/cloudability/latest) | `0.0.40`               |
 {: caption="Terraform provider dependencies" caption-side="bottom"}
@@ -87,6 +107,6 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 | Terraform Modules | Version  |
 | :----------------- | :------- |
 | [terraform-ibm-modules/resource-group/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/resource-group/ibm/latest)      | `>=1.1.6` |
-| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=8.16.4` |
-| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=4.19.1` |
+| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=8.19.3` |
+| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=4.19.8` |
 {: caption="Terraform modules" caption-side="bottom"}
