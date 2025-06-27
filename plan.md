@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-06-27"
 
 keywords:
 
@@ -108,8 +108,10 @@ The following access policies are necessary to run the DA.
 
 | Service | Platform Roles | Service Roles | Reason |
 |------|-------------|------|---------|
-| `{{site.data.keyword.cos_full_notm}}` | `Administrator` | `Writer`, `ObjectReader` | The `Writer` role is needed to create/delete and configure a bucket in a {{site.data.keyword.cos_short}} instance. The `Administrator` role is needed to create the iam policy, which grants {{site.data.keyword.cloud_notm}} access to read the billing reports in the bucket and to create the service authorization between Billing and {{site.data.keyword.cos_full_notm}}. `ObjectReader` is needed to read the list of objects in the bucket in order to validate that billing reports are added to the bucket. |
-| `{{site.data.keyword.keymanagementserviceshort}}` | `Editor` | `Manager` | Used to create a key and key ring in a {{site.data.keyword.keymanagementserviceshort}} instance for bucket encryption. |
+| `{{site.data.keyword.cos_full_notm}}` | `Administrator` | `Writer`, `ObjectReader` | The `Writer` role is needed to create/delete and configure a bucket in a {{site.data.keyword.cos_short}} instance. \nThe `Administrator` role is needed to: \n 1. Create the iam policy, which grants {{site.data.keyword.cloud_notm}} access to read the billing reports in the bucket. \n 2. create the service authorization between Billing and {{site.data.keyword.cos_full_notm}} 3. create the context-based restrictions for the Object Storagebucket.\n `ObjectReader` is needed to read the list of objects in the bucket in order to validate that billing reports are added to the bucket. |
+| `{{site.data.keyword.keymanagementserviceshort}}` | `Administrator` | `Manager` | Used to create a key, key ring in a {{site.data.keyword.keymanagementserviceshort}} instance for bucket encryption and create a context-based restriction between the {{site.data.keyword.keymanagementserviceshort}} instance and the COS bucket. |
+| `Schematics` | `Administrator` | N/A | Allows for the creation of a Schematics context-based restriction zone so Projects is able to update and destroy the COS bucket after provisioning. |
+| `Context-based Restrictions` | `Editor` | N/A | Allows access to add network zones to your context based restriction rules. |
 | `Billing` | `Administrator` | N/A | Used to configure account billing exports to the {{site.data.keyword.cos_full_notm}} bucket |
 | `IAM Access Management` | `Administrator` | N/A | 1. Create custom iam roles for least privileged access for {{site.data.keyword.IBM_notm}} Cloudability.\n 2. Create service authorizations between {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}} and between Billing and {{site.data.keyword.cos_full_notm}}.\n 3. Ability to grant policies to the Cloudability service ID to read the billing reports from the bucket. |
 | `Enterprise` | `Administrator` | N/A | Only for enterprise accounts. Used to manage the iam policy for {{site.data.keyword.IBM_notm}} Cloudability to view the list of child accounts. |

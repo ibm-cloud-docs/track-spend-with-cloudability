@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-06-27"
 
 subcollection: track-spend-with-cloudability
 
@@ -77,7 +77,7 @@ In addition to the general [identity and access management responsibilities](/do
 |----------|-----------------------|--------|
 | Secure with least privilege | Documenting and maintaining the [minimal IAM access requirements to run the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs). | Ensure that the DA operator (user, service ID, or trusted profile) is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs) |
 | Manage secrets | N/A | * Generate the necessary secrets (IAM and Cloudability API keys) and configure trusted profiles that are needed to run the DA. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
-| {{site.data.keyword.cos_short}} Billing Report Access | * Secure with Cloudability having only the [minimal required access by using iam custom roles](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs#what-access-for-cloudability). |
+| {{site.data.keyword.cos_short}} Billing Report Access | * Secure with Cloudability having only the [minimal required access by using iam custom roles](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs#what-access-for-cloudability). \n * Restrict access to the bucket to only permitted zones using [context-based restrictions (CBR)](/docs/account?topic=account-context-restrictions-whatis) | Administrate the Identity and Access Management (IAM) access policies and context-based restrictions (CBR) to allow access to the {{site.data.keyword.cos_full_notm}} bucket containing the {{site.data.keyword.IBM_notm}} billing reports. |
 {: row-headers}
 {: caption="Responsibilities for identity and access management" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}

@@ -72,3 +72,5 @@ toc:
             - topic: troubleshoot-iam-policy-conflict.md
             - topic: troubleshoot-no-data-in-cloudability.md
             - topic: troubleshoot-cloudability-verification-failed.md
+            - topic: troubleshoot-cbr-creation-failed.md
+            - topic: troubleshoot-cbr-access-to-bucket.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-06-27"
 
 keywords:
 
@@ -25,6 +25,42 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture. Each release is grouped by the date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## June 2025
+{: #subcollection-june2025}
+
+### 27 June 2025
+{: #subcollection-27june2026}
+
+Version 1.2.1 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) is available
+: Adds [Context-Based Restrictions(CBR)](/docs/account?topic=account-context-restrictions-whatis) to the Object Storage bucket for added security. By default, access to the bucket is restricted to just the IBM Cloud Billing, IBM Cloudability, and Schematics (for provisioning). Optionally, additional CBR zones can be associated or created from IP addresses to grant additional access to the storage bucket.
+
+#### Additional Required Access
+{: #subcollection-27june2026-access}
+
+The following access roles are now required:
+
+* Schematics - Administrator
+* Context-based Restrictions - Editor
+* Key Protect - Administrator
+
+For the complete list of access policies see: [required access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#required-policies).
+
+#### Inputs Added
+{: #subcollection-26june2026-inputs}
+
+The new inputs include:
+
+* `cbr_enforcement_mode`
+* `existing_allowed_cbr_bucket_zone_id`
+* `additional_allowed_cbr_bucket_ip_addresses`
+* `cbr_additional_zone_name`
+* `cbr_billing_zone_name`
+* `cbr_cloudability_zone_name`
+* `cbr_cos_zone_name`
+* `cbr_schematics_zone_name`
+
+See [CBR configuration inputs](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cbr-config) in the configuration reference for documentation.
 
 ## February 2025
 {: #subcollection-feb2025}
@@ -93,13 +129,13 @@ Version 1.0.21 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement dep
 ## Source Dependencies
 {: #attribution}
 
-The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture uses the following dependencies:
+The latest {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture uses the following dependencies:
 
 
 | Terraform Provider | Version  |
 | :----------------- | :------- |
-| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.75.2` |
-| [Mastercard/restapi](https://registry.terraform.io/providers/Mastercard/restapi/latest) | `1.20.0`               |
+| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.79.2` |
+| [Mastercard/restapi](https://registry.terraform.io/providers/Mastercard/restapi/latest) | `2.0.1`               |
 | [skyscrapr/terraform-provider-cloudability](https://registry.terraform.io/providers/skyscrapr/cloudability/latest) | `0.0.40`               |
 {: caption="Terraform provider dependencies" caption-side="bottom"}
 
@@ -107,6 +143,7 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 | Terraform Modules | Version  |
 | :----------------- | :------- |
 | [terraform-ibm-modules/resource-group/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/resource-group/ibm/latest)      | `>=1.1.6` |
-| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=8.19.3` |
-| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=4.19.8` |
+| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=9.0.7` |
+| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=5.1.8` |
+| [terraform-ibm-modules/cbr/ibm/](https://github.com/terraform-ibm-modules/terraform-ibm-cbr) | 1.29.0 |
 {: caption="Terraform modules" caption-side="bottom"}

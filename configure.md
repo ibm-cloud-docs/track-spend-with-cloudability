@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-06-27"
 
 keywords:
 
@@ -103,14 +103,29 @@ The DA supports deployment to any of the available [{{site.data.keyword.keymanag
 | `archive_type` | Specifies the storage class or archive type to which you want the object to transition. | `string` | `Glacier` |
 {: caption="{{site.data.keyword.cos_full_notm}} Bucket" caption-side="bottom"}
 
+### Bucket Context-based restrictions
+{: #cbr-config}
+
+| Name | Description | Type | Default |
+|------|-------------|------|---------|
+| `cbr_enforcement_mode` | The rule enforcement mode: \n* enabled - The restrictions are enforced and reported. This is the default. \n* disabled - The restrictions are disabled. Nothing is enforced or reported. \n* report - The restrictions are evaluated and reported, but not enforced. | `string` | `enabled` |
+| `existing_allowed_cbr_bucket_zone_id` | An extra CBR zone ID which is permitted to access the bucket. This zone typically represents the IP addresses for your company or workstation to allow access to view the contents of the bucket. It can be used as an alternative to `additional_allowed_cbr_bucket_ip_addresses` in the case that a zone exists. | `string` | `__NULL__` |
+| `additional_allowed_cbr_bucket_ip_addresses` | A list of CBR zone addresses or an IP address (ie. 169.23.56.234) or range (169.23.22.0-169.23.22.255) which are permitted to access the bucket. This zone typically represents the IP addresses for your company or workstation to allow access to view the contents of the bucket. | `list(string)` | `[]` |
+| `cbr_additional_zone_name` | Name of the CBR zone that corresponds to the IP address range set in `additional_allowed_cbr_bucket_ip_addresses`. | `string` | company-billing-reports-bucket-access |
+| `cbr_billing_zone_name` | Name of the CBR zone which represents IBM Cloud billing. | `string` | ibmcloud-billing-reports-bucket-writer |
+| `cbr_cloudability_zone_name` | Name of the CBR zone which represents IBM Cloudability. | `string` | cldy-billing-reports-bucket-reader |
+| `cbr_cos_zone_name` | Name of the CBR zone which represents Cloud Object Storage service. | `string` | cldy-billing-reports-object-storage |
+| `cbr_schematics_zone_name` | Name of the CBR zone which represents Schematics. The schematics zone allows Projects to access and manage the Object Storage bucket. | `string` | cldy-billing-reports-object-storage |
+{: caption="Bucket context-based restrictions" caption-side="bottom"}
+
 ### {{site.data.keyword.cos_short}} bucket encryption with {{site.data.keyword.keymanagementserviceshort}}
 {: #cos-bucket-encryption-config}
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| `existing_kms_instance_guid` | The GUID of the {{site.data.keyword.keymanagementserviceshort}} instance. | `string` | `__NULL__` |
+| `existing_kms_instance_crn` | The CRN of the {{site.data.keyword.keymanagementserviceshort}} instance. | `string` | `__NULL__` |
 | `skip_iam_authorization_policy` | Whether to skip the creation of an IAM authorization policy that permits the Object Storage instance to read the encryption key from the {{site.data.keyword.keymanagementserviceshort}} instance. WARNING: An authorization policy must exist before an encrypted bucket can be created. | `boolean` | `false` |
-| `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance, which stores the Object Storage encryption key. Not needed if `existing_kms_instance_guid` is used. | `string` | `cloudability-bucket-encryption` |
+| `key_protect_instance_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} instance which stores the Object Storage encryption key. Not needed if `existing_kms_instance_crn` is used. | `string` | `cloudability-bucket-encryption` |
 | `key_ring_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key ring to store the Object Storage encryption key. | `string` | `bucket-encryption` |
 | `use_existing_key_ring` | Whether the `key_ring_name` corresponds to an existing key ring or a new key ring for storing the encryption key. | `boolean` | `false` |
 | `key_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key for encryption of the Object Storage bucket. If `__NULL__` then the name of the Object Storage bucket is used instead. | `string` | `__NULL__` |

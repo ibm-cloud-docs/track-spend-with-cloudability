@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-13"
+lastupdated: "2025-06-27"
 
 keywords:
 
@@ -67,6 +67,12 @@ Yes, you can [configure the deployable architecture](/docs/secure-enterprise?top
 {: faq}
 
 The billing reports are updated in the Object Storage bucket by {{site.data.keyword.cloud_notm}} Billing once a day. Cloudability fetches the data from the bucket in the same day.
+
+## Why can't I view the report files in the billing reports Object Storage bucket?
+{: #access-to-billing-report-files}
+{: faq}
+
+By default, the Object Storage bucket which contains the billing report files is secured by using [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis) to limit access to IBM Cloudability, the IBM Cloud billing service, and IBM Cloud Schematics. To disable the CBR on the bucket or to permit another zone with access to the bucket, see the [context-based restrictions configuration options](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cbr-config) or the troubleshooting guide on [accessing the billing report objects](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-troubleshoot-access-billing-report-objects).
 
 ## What permissions does Cloudability need to integrate with my account?
 {: #what-access-for-cloudability}

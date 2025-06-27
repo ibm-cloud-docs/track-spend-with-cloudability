@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-01-09"
+lastupdated: "2025-06-27"
 
 keywords:
 
@@ -52,7 +52,8 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architectu
 4. Grants Cloudability access to read the billing reports from the {{site.data.keyword.cos_full_notm}} bucket
     - *If the account is an enterprise*: Grants Cloudability access to read the list of child accounts in the enterprise
     - An IAM Custom role is used so Cloudability is only granted the minimum required access.
-5. Adds the {{site.data.keyword.cloud_notm}} account or enterprise to {{site.data.keyword.IBM_notm}} Cloudability
+5. Creates [context-based restrictions](/docs/account?topic=account-context-restrictions-whatis) (not shown in diagram) which restricts access to the Object Storage bucket to be only from {{site.data.keyword.cloud_notm}} Billing, Cloudability, Schematics (used for provisioning by Projects. Not shown in diagram) and any other custom provided zone.
+6. Adds the {{site.data.keyword.cloud_notm}} account or enterprise to {{site.data.keyword.IBM_notm}} Cloudability
 
 ## Getting started
 {: #getting-started}
