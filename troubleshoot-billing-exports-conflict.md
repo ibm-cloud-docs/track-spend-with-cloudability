@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-01-09"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do I see a `billing_report_snapshot_instance` conflict in the deployment logs of the DA?
+# Why do I see a `billing_report_snapshot_instance` conflict in the deployment logs of the deployable architecture?
 {: #troubleshoot-billing_report_snapshot_instance-conflict}
 {: troubleshoot}
 

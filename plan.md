@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -16,16 +16,16 @@ subcollection: track-spend-with-cloudability
 # Setting up {{site.data.keyword.IBM_notm}} Cloudability Enablement Deployable Architecture
 {: #planning}
 
-Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement Deployable Architecture(DA) requires authorization inputs from the {{site.data.keyword.cloud_notm}} account. An {{site.data.keyword.IBM_notm}} Cloudability API key is also needed to add your {{site.data.keyword.cloud_notm}} account to {{site.data.keyword.IBM_notm}} Cloudability. Follow these instructions to help create and manage your [API keys](#x8051010){: term}.
+Running the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture requires authorization inputs from the {{site.data.keyword.cloud_notm}} account. An {{site.data.keyword.IBM_notm}} Cloudability API key is also needed to add your {{site.data.keyword.cloud_notm}} account to {{site.data.keyword.IBM_notm}} Cloudability. Follow these instructions to help create and manage your [API keys](#x8051010){: term}.
 {: shortdesc}
 
-Authentication to {{site.data.keyword.IBM_notm}} Cloudability is not required to run the deployable architecture. You can configure the deployable architecture(DA) to create the infrastructure and manually add the {{site.data.keyword.cloud_notm}} account to Cloudability through its UI or re-configure the DA to add the {{site.data.keyword.cloud_notm}} account to Cloudability later. See the [Cloudability configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure) for more details.
+Authentication to {{site.data.keyword.IBM_notm}} Cloudability is not required to run the deployable architecture. You can configure the deployable architecture to create the infrastructure and manually add the {{site.data.keyword.cloud_notm}} account to Cloudability through its UI or re-configure the deployable architecture to add the {{site.data.keyword.cloud_notm}} account to Cloudability later. See the [Cloudability configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure) for more details.
 {: notice}
 
 ## Cloudability authorization
 {: #api-key}
 
-The Cloudability Enablement DA supports two types of authentication to Cloudability:
+The Cloudability Enablement deployable architecture supports two types of authentication to Cloudability:
 
 1. [Cloudability API key](#acquiring-api-key) (simpler)
 2. [Access Administration API key](#frontdoor-api-key) (more secure)
@@ -41,7 +41,7 @@ Ensure that your Cloudability user has an **Administrator** role so that it has 
 Create your API Key as a functional user (for example: **cloudability-integration**) with access to add cloud vendors.
 {: recommend}
 
-Securely store your API Key in [{{site.data.keyword.cloud_notm}} Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as an arbitrary key. Secrets Manager makes it easier to rotate the API key and allows it to be referenced in [{{site.data.keyword.IBM}} Projects](/docs/secure-enterprise?topic=secure-enterprise-project-faqs#project-log-issue) without exposing the key in your DA configurations.
+Securely store your API Key in [{{site.data.keyword.cloud_notm}} Secrets Manager](/docs/secrets-manager?topic=secrets-manager-getting-started) as an arbitrary key. Secrets Manager makes it easier to rotate the API key and allows it to be referenced in [{{site.data.keyword.IBM}} Projects](/docs/secure-enterprise?topic=secure-enterprise-project-faqs#project-log-issue) without exposing the key in your deployable architecture configurations.
 {: recommend}
 
 ### Option 1: Acquiring a Cloudability api key
@@ -55,9 +55,9 @@ A logged in user can retrieve a Cloudability API key from the [Cloudability acco
 3. Select **Manage Profile**.
 4. Select the **Preferences** tab to reveal the **Cloudability API** section on the right.
 5. If an API Key is not viewable, click **Enable Access** to reveal the API Key displayed in the text box.
-6. Copy and securely store the API Key for the next step of [configuring the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
+6. Copy and securely store the API Key for the next step of [configuring the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
 
-See the [Cloudability getting started API documentation](https://help.apptio.com/en-us/cloudability/api/v3/getting%20started%20with%20the%20cloudability.htm){: external} for more details.
+See the [Cloudability getting started API documentation](https://www.ibm.com/docs/en/cloudability-commercial){: external} for more details.
 
 ### Option 2: Acquiring an Access Administration API key
 {: #frontdoor-api-key}
@@ -75,9 +75,9 @@ A logged in user can create an Access Administration API key from the [frontdoor
 7. Select the desired environment from the list of environments and then click **Next**
 8. Select roles for the API key. Select **Next**, and then select **Confirm**.
 9. In the [**User Profile** page](https://frontdoor-ui.apptio.com/profile), select the **Environment Access** tab.
-10. Note the Environment Id below the environment name in the table of Environments and the corresponding API Keys. Save the Environment Id when [configuring the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
+10. Note the Environment Id below the environment name in the table of Environments and the corresponding API Keys. Save the Environment Id when [configuring the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud).
 
-See the [Cloudability access administration documentation](https://help.apptio.com/en-us/frontdoor/admin-guide/eaa-api/overview-api-keys-faq.html#CreateandmanageAccessAdministrationAPIkeys){: external} for more details and FAQ on Access Administration API keys.
+See the [Cloudability access administration documentation](https://www.ibm.com/docs/en/cloudability-commercial/cloudability-enterprise/saas?topic=gscav-enhanced-access-administration-api-authentication-via-api-keys){: external} for more details and FAQ on Access Administration API keys.
 
 
 ## Configuring {{site.data.keyword.cloud_notm}} IAM permissions
@@ -91,7 +91,7 @@ For enterprise accounts the IAM credentials only need to be configured in the pr
 ### Before you begin
 {: #iam-before-you-begin}
 
-If you have the following access, you can create access credentials to run the DA:
+If you have the following access, you can create access credentials to run the deployable architecture:
 
 - Account owner
 - Administrator role on all account management services
@@ -101,10 +101,10 @@ If you have the following access, you can create access credentials to run the D
 ### Required policies
 {: #required-policies}
 
-Add the access policies to an [access group](/docs/account?topic=account-groups) rather than directly adding the policies to your DA operator (trusted profile, user, or service ID.).
+Add the access policies to an [access group](/docs/account?topic=account-groups) rather than directly adding the policies to your deployable architecture operator (trusted profile, user, or service ID.).
 {: recommend}
 
-The following access policies are necessary to run the DA.
+The following access policies are necessary to run the deployable architecture.
 
 | Service | Platform Roles | Service Roles | Reason |
 |------|-------------|------|---------|
@@ -115,7 +115,7 @@ The following access policies are necessary to run the DA.
 | `Billing` | `Administrator` | N/A | Used to configure account billing exports to the {{site.data.keyword.cos_full_notm}} bucket |
 | `IAM Access Management` | `Administrator` | N/A | 1. Create custom iam roles for least privileged access for {{site.data.keyword.IBM_notm}} Cloudability.\n 2. Create service authorizations between {{site.data.keyword.cos_short}} and {{site.data.keyword.keymanagementserviceshort}} and between Billing and {{site.data.keyword.cos_full_notm}}.\n 3. Ability to grant policies to the Cloudability service ID to read the billing reports from the bucket. |
 | `Enterprise` | `Administrator` | N/A | Only for enterprise accounts. Used to manage the iam policy for {{site.data.keyword.IBM_notm}} Cloudability to view the list of child accounts. |
-| `All Account Management` | `Administrator` | N/A | Only if the DA is creating a new Resource Group to provision resources. `Administrator` is needed (as opposed to the `Editor` role) to delete the resource group in the event of deprovisioning. Alternatively resources can be placed in an existing resource group in which case access needs to be granted to that resource group. See [giving access to resources in resource groups](/docs/account?topic=account-rgs_manage_access&interface=ui) for more details. |
+| `All Account Management` | `Administrator` | N/A | Only if the deployable architecture is creating a new Resource Group to provision resources. `Administrator` is needed (as opposed to the `Editor` role) to delete the resource group in the event of deprovisioning. Alternatively resources can be placed in an existing resource group in which case access needs to be granted to that resource group. See [giving access to resources in resource groups](/docs/account?topic=account-rgs_manage_access&interface=ui) for more details. |
 {: caption="Access Policies" caption-side="bottom"}
 
 ### Using an access groups
@@ -126,7 +126,7 @@ The following access policies are necessary to run the DA.
 3. Add the Operator (user, service ID, trusted profile) as a [member of the access group](/docs/account?topic=account-groups&interface=ui#add-users-ag).
 4. Create an API Key if the Operator is a [user](/docs/account?topic=account-userapikey&interface=ui) or [service ID](/docs/account?topic=account-serviceidapikeys&interface=ui). Alternatively use [{{site.data.keyword.IBM_notm}} Secrets Manager to manage the IAM credentials](/docs/secrets-manager?topic=secrets-manager-iam-credentials&interface=ui) of your service ID.
 
-It is recommended to store any user or service [API keys in Secrets Manager](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui). Secrets manager allows you to easily rotate credentials and prevents exposing highly privileged credentials to any users who are responsible for the running and management of the project that is used to run the DA.
+It is recommended to store any user or service [API keys in Secrets Manager](/docs/secure-enterprise?topic=secure-enterprise-authorize-project&interface=ui). Secrets manager allows you to easily rotate credentials and prevents exposing highly privileged credentials to any users who are responsible for the running and management of the project that is used to run the deployable architecture.
 {: recommend}
 
 
@@ -136,7 +136,7 @@ It is recommended to store any user or service [API keys in Secrets Manager](/do
 1. [Create a Project](/docs/secure-enterprise?topic=secure-enterprise-setup-project)
 2. [Create a Trusted Profile for the Project](/docs/secure-enterprise?topic=secure-enterprise-tp-project#create-projects-tp)
 3. Assign the access policies from [Table 1](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#iam-before-you-begin) and the [trusted profile policies that are needed by Projects](/docs/secure-enterprise?topic=secure-enterprise-tp-project#create-projects-tp) to the trusted profile.
-4. Copy the [the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#find-tp-id) for the next step to [deploy the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud)
+4. Copy the [the trusted profile ID](/docs/secure-enterprise?topic=secure-enterprise-tp-project#find-tp-id) for the next step to [deploy the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-deploy-cloud)
 
 ## Next steps
 {: #planning-next-steps}

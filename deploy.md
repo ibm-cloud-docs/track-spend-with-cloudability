@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-01-09"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -29,12 +29,12 @@ Ensure that you created [iam credentials](/docs/track-spend-with-cloudability?to
 
 For more information, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
-### Deploying the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA
+### Deploying the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture
 {: #running-cloudability-enablement}
 
-Complete the following steps to run the Cloudability Enablement DA with {{site.data.keyword.cloud_notm}} Projects:
+Complete the following steps to run the Cloudability Enablement deployable architecture with {{site.data.keyword.cloud_notm}} Projects:
 
-1.  From the {{site.data.keyword.cloud_notm}} [catalog](/catalog?search=Cloudability%20Enablement%20label%3Adeployable_architecture#search_results){: external}, search for Cloudability Enablement, and click the tile for the DA.
+1.  From the {{site.data.keyword.cloud_notm}} [catalog](/catalog?search=Cloudability%20Enablement%20label%3Adeployable_architecture#search_results){: external}, search for Cloudability Enablement, and click the tile for the deployable architecture.
 2.  Select the latest product version from the Architecture section.
 3.  Click **Add to project**.
     1.  Name your project, enter a description, and specify a configuration name. Then, click **Create**.
@@ -52,20 +52,20 @@ Complete the following steps to run the Cloudability Enablement DA with {{site.d
     6.  Save the configuration.
     7.  Click **Validate**. Validation takes a few minutes.
 
-        {{site.data.keyword.cloud_notm}} Projects run a Security and Compliance Center (SCC) scan against the {{site.data.keyword.cloud_notm}} for Financial Services profile. Controls that are part of the DA and are included in the list of supported {{site.data.keyword.compliance_short}} rules are checked when you validate the configuration.
+        {{site.data.keyword.cloud_notm}} Projects run a Security and Compliance Center (SCC) scan against the {{site.data.keyword.cloud_notm}} for Financial Services profile. Controls that are part of the deployable architecture and are included in the list of supported {{site.data.keyword.compliance_short}} rules are checked when you validate the configuration.
 {: important}
 
 5.  Deploy the configuration. After you validate your configuration, you can deploy it to your target account:
 
     1.  Review the input values and make any necessary changes.
-    2.  Click **Deploy**. Deploying the DA can take a few minutes. You are notified when the deployment is successful.
+    2.  Click **Deploy**. Deploying the deployable architecture can take a few minutes. You are notified when the deployment is successful.
 
-6.  Review the outputs from the DA.
+6.  Review the outputs from the deployable architecture.
 
 7.  If using the `manual` mode for the `cloudability_auth_type`.
 
     1.  Login to Cloudability UI and navigate to **Settings** -> **Vendor Credentials** and Click **Add Datasource** and select **IBM**.
-    2.  Complete the form based on the outputs from the DA.
+    2.  Complete the form based on the outputs from the deployable architecture.
     3. Click **Verify Credentials**
 
 8.  You can validate that the connection to {{site.data.keyword.cloud_notm}} was completed in Cloudability under [**Vendor Credentials**](https://app.apptio.com/cloudability#/credentials/ibm)
@@ -73,11 +73,11 @@ Complete the following steps to run the Cloudability Enablement DA with {{site.d
 During the validation and deployment process, monitor the [needs attention items](/docs/secure-enterprise?topic=secure-enterprise-needs-attention-projects). The widget reflects any issue that occurs in your configurations.
 {: remember}
 
-### Updating the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA
+### Updating the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture
 {: #updating-cloudability-enablement}
 
 
-1. Select the project from the [projects list](/projects) that contains the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA)
+1. Select the project from the [projects list](/projects) that contains the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture
 2. Go to the Configurations tab, select the configuration corresponding to the Cloudability Enablement deployable architecture.
 3. Click the **Edit** button.
 4. Update the desired [configuration inputs](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure) or [upgrade to a new version](/docs/secure-enterprise?topic=secure-enterprise-needs-attention-projects&interface=ui#na-version-update)

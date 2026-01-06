@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -24,20 +24,20 @@ The {{site.data.keyword.IBM_notm}} Cloudability Enablement [deployable architect
 {{site.data.keyword.IBM_notm}} Cloudability is a cloud financial management platform that provides visibility and optimization capabilities across all major cloud providers. The tool offers features such as cost allocation, budget management, rightsizing recommendations, and customizable reporting. With the help of {{site.data.keyword.IBM_notm}} Cloudability, you can help maximize your companies cloud investments and align cloud usage with business objectives.
 Visit the [{{site.data.keyword.IBM_notm}} Cloudability product page](https://www.apptio.com/products/cloudability/) to learn more.
 
-## Why use the Cloudability Enablement deployable architecture (DA)?
+## Why use the Cloudability Enablement deployable architecture?
 {: #why-use}
 
-The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA performs the necessary steps to start tracking your {{site.data.keyword.cloud_notm}} expenditure within Cloudability. These are some of the key benefits:
+The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture performs the necessary steps to start tracking your {{site.data.keyword.cloud_notm}} expenditure within Cloudability. These are some of the key benefits:
 
-1. **Faster and more consistent deployment**: DA's run as a pre-configured template that uses [terraform](https://developer.hashicorp.com/terraform/intro){: external}. This terraform template ensures that the necessary steps are performed in the correct sequence to configure the different components, which reduces configuration errors.
+1. **Faster and more consistent deployment**: deployable architecture's run as a pre-configured template that uses [terraform](https://developer.hashicorp.com/terraform/intro){: external}. This terraform template ensures that the necessary steps are performed in the correct sequence to configure the different components, which reduces configuration errors.
 
-2. **Reduced complexity**: By abstracting away many infrastructure details, this DA reduces the number of inputs. This means that less of your time is spent gathering information and synchronizing information between the two services. Instead, your {{site.data.keyword.cloud_notm}} connection to {{site.data.keyword.IBM_notm}} Cloudability can be managed in a central place.
+2. **Reduced complexity**: By abstracting away many infrastructure details, this deployable architecture reduces the number of inputs. This means that less of your time is spent gathering information and synchronizing information between the two services. Instead, your {{site.data.keyword.cloud_notm}} connection to {{site.data.keyword.IBM_notm}} Cloudability can be managed in a central place.
 
 3. **Security and Compliance**: Follows {{site.data.keyword.cloud_notm}}'s recommended best practices, which are maintained through regular version updates to help ensure that your workloads are secure and compliant.
 
-4. **Customization**: The DA inputs default to the recommended best practices. However, by using the various [configuration options](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure), the deployment can be adjusted to meet your business needs.
+4. **Customization**: The deployable architecture inputs default to the recommended best practices. However, by using the various [configuration options](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure), the deployment can be adjusted to meet your business needs.
 
-## What actions does this deployable architecture (DA) perform?
+## What actions does this deployable architecture perform?
 {: #what-actions}
 
 ![Architectural Diagram](../deployable-reference-architectures/terraform-ibm-cloudability-onboarding/cloudability-all-inclusive-onboarding.svg){: caption="Architecture Diagram" caption-side="bottom"}

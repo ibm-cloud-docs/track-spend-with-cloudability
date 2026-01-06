@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-10"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -21,7 +21,7 @@ content-type: troubleshoot
 It can take as much as 24 hours for your {{site.data.keyword.cloud_notm}} account billing data to reach Cloudability. If you still don't see billing data, then check to see whether billing files are being written to the {{site.data.keyword.cos_full_notm}} bucket and that Cloudability can reach the bucket.
 {: shortdesc}
 
-The Cloudability Enablement DA was successfully deployed, but you still don't see the accounts {{site.data.keyword.cloud_notm}} billing data within Cloudability.
+The Cloudability Enablement deployable architecture was successfully deployed, but you still don't see the accounts {{site.data.keyword.cloud_notm}} billing data within Cloudability.
 {: tsSymptoms}
 
 Cloudability is unable to communicate to the storage bucket.

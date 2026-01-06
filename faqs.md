@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -56,7 +56,7 @@ No, [immutable storage](/docs/cloud-object-storage?topic=cloud-object-storage-im
 
 [Configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui#project-input-values) to use an existing {{site.data.keyword.cos_short}} instance by entering the {{site.data.keyword.cos_full_notm}} [CRN](#x9494304){: term} in the input field `existing_cos_instance_id` and set `create_cos_instance` to `false`. See the [{{site.data.keyword.cos_short}} configuration reference](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-configure#cos-billing-exports-config) for more details.
 
-## Can I use an existing {{site.data.keyword.keymanagementserviceshort}} instance with the DA?
+## Can I use an existing {{site.data.keyword.keymanagementserviceshort}} instance with the deployable architecture?
 {: #existing-key-protect-instance}
 {: faq}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -32,7 +32,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 ### 27 June 2025
 {: #subcollection-27june2026}
 
-Version 1.2.1 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) is available
+Version 1.2.1 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture is available
 : Adds [Context-Based Restrictions(CBR)](/docs/account?topic=account-context-restrictions-whatis) to the Object Storage bucket for added security. By default, access to the bucket is restricted to just the IBM Cloud Billing, IBM Cloudability, and Schematics (for provisioning). Optionally, additional CBR zones can be associated or created from IP addresses to grant additional access to the storage bucket.
 
 #### Additional Required Access
@@ -68,7 +68,7 @@ See [CBR configuration inputs](/docs/track-spend-with-cloudability?topic=track-s
 ### 28 Feb 2025
 {: #subcollection-28feb2025}
 
-Version 1.1.4 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) is available
+Version 1.1.4 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture is available
 :
 - Updated [terraform-ibm-modules/cos/ibm](https://github.com/terraform-ibm-modules/terraform-ibm-cos/tree/main) to version 8.19.3 which uses the new COS bucket terraform resource `ibm_cos_lifecycle_configuration`. This removes the deprecation error message.
 
@@ -89,24 +89,24 @@ Version 1.1.4 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement depl
 ### 10 Jan 2025
 {: #subcollection-10jan2025}
 
-Version 1.1.0 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) is available
-: Added support for Access Administration authentication, which uses a more secure token-based authentication as opposed to the basic authentication used by Cloudability API key. See the [Access Administration overview and FAQ](https://help.apptio.com/en-us/frontdoor/admin-guide/eaa-api/overview-api-keys-faq.html){: external} within the Apptio Help Center for more details.
+Version 1.1.0 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture is available
+: Added support for Access Administration authentication, which uses a more secure token-based authentication as opposed to the basic authentication used by Cloudability API key. See the [Access Administration overview and FAQ](https://www.ibm.com/docs/en/apptio-platform/access-administration/saas?topic=apis-enhanced-access-administration-api-overview-api-keys-faq){: external} within the IBM Documentation Center for more details.
 To switch to using Access Administration authentication, use the following steps to [configure the deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-config-project&interface=ui).
 
 1. Follow the [acquiring access administration API key](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#frontdoor-api-key) guide to create the API key within Apptio.
-2. Edit the DA configuration within IBM Cloud:
-    1. Select the project with the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) from the [projects list](/projects)
+2. Edit the deployable architecture configuration within IBM Cloud:
+    1. Select the project with the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture from the [projects list](/projects)
     2. Go to the Configurations tab. Select the configuration corresponding to the Cloudability Enablement deployable architecture.
     3. Click the **Edit** button.
-3. On the **Required** tab of the DA configuration page within IBM Cloud, select the `Access Administration Authentication` option for the `cloudability_auth_type`.
+3. On the **Required** tab of the deployable architecture configuration page within IBM Cloud, select the `Access Administration Authentication` option for the `cloudability_auth_type`.
 4. Enter the `frontdoor_public_key`, `frontdoor_secret_key`, and `cloudability_environment_id` created in step 1.
 5. Click the **Save** button
 6. Click the **Validate** button. A modal dialog is displayed which provides more details about your in-progress validation.
 
 In addition, `cloudability_auth_type` can be set to `none`, or `manual`.
 
-* `none`: disables any connection to Cloudability so that the DA can be used as a way to configure [export billing reports to Cloud Object Storage](/docs/account?topic=account-exporting-your-usage&interface=ui#enable-export-usage)
-* `manual`: Creates billing exports as in the case or `none`but also grants Cloudability access to the Object Storage bucket, but the DA does not add the IBM Cloud account to Cloudability. Use this option to manually add the IBM Cloud account to Cloudability through its UI.
+* `none`: disables any connection to Cloudability so that the deployable architecture can be used as a way to configure [export billing reports to Cloud Object Storage](/docs/account?topic=account-exporting-your-usage&interface=ui#enable-export-usage)
+* `manual`: Creates billing exports as in the case or `none`but also grants Cloudability access to the Object Storage bucket, but the deployable architecture does not add the IBM Cloud account to Cloudability. Use this option to manually add the IBM Cloud account to Cloudability through its UI.
 
 #### Inputs Added
 {: #subcollection-13jan2025-inputs}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-01-09"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do I see an internal server error in the deployment logs of the Cloudability Enablement DA?
+# Why do I see an internal server error in the deployment logs of the Cloudability Enablement deployable architecture?
 {: #troubleshoot-cldy-internal_server_error}
 {: troubleshoot}
 
@@ -42,7 +42,7 @@ This error is often because of an issue in the handling of the request to add th
 Sometimes the {{site.data.keyword.cloud_notm}} account is successfully added to Cloudability even though an error was returned. So, first check whether the account was added within Cloudability on the [{{site.data.keyword.IBM_notm}} vendor credentials page](https://app.apptio.com/cloudability#/credentials/ibm){: external}.
 {: tsResolve}
 
-If the account does exist, then the recommended approach is to delete the {{site.data.keyword.cloud_notm}} account from Cloudability and redeploy the DA configuration to add the account. Deploying through the DA ensures that the vendor configurations  are set correctly within Cloudability.
+If the account does exist, then the recommended approach is to delete the {{site.data.keyword.cloud_notm}} account from Cloudability and redeploy the deployable architecture configuration to add the account. Deploying through the deployable architecture ensures that the vendor configurations  are set correctly within Cloudability.
 
 If the deployment does not add the {{site.data.keyword.cloud_notm}} account to Cloudability then the terraform state for adding the Cloudability account may exist and needs to be removed. You can remove the state by using the following {{site.data.keyword.cloud_notm}} CLI command:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -30,7 +30,7 @@ BMCOSUI020001: Your attempt to fetch objects failed. Please contact your adminis
 ```
 {: pre}
 
-The most likely cause is that you are denied because of a [context-based restriction (CBR)](/docs/account?topic=account-context-restrictions-whatis). By default the Cloudability Enablement DA creates a CBR to limit access to only IBM Cloudability, the IBM Cloud billing service, and IBM Cloud Schematics.
+The most likely cause is that you are denied because of a [context-based restriction (CBR)](/docs/account?topic=account-context-restrictions-whatis). By default the Cloudability Enablement deployable architecture creates a CBR to limit access to only IBM Cloudability, the IBM Cloud billing service, and IBM Cloud Schematics.
 {: tsCauses}
 
 To resolve the issue, you can do one of two things:

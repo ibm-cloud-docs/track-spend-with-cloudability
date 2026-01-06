@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -15,17 +15,17 @@ subcollection: track-spend-with-cloudability
 # Configuration reference for {{site.data.keyword.IBM_notm}} Cloudability enablement
 {: #configure}
 
-The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA) requires two parameters to run:
+The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture requires two parameters to run:
 
 1.  An {{site.data.keyword.cloud_notm}} IAM API key with permissions to run the deployable architecture
 2.  An {{site.data.keyword.IBM_notm}} Cloudability API Key to add the {{site.data.keyword.cloud_notm}} Account to Cloudability
 
-See [setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning) for information about these parameters and how to create them.
+See [setting up the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning) for information about these parameters and how to create them.
 
 ## Supported regions
 {: #regions}
 
-The DA supports deployment to any of the available [{{site.data.keyword.keymanagementserviceshort}} regions](/docs/key-protect?topic=key-protect-regions). Your {{site.data.keyword.keymanagementserviceshort}} instance and {{site.data.keyword.cos_short}} bucket are created in the same region. The default region is `us-south`.
+The deployable architecture supports deployment to any of the available [{{site.data.keyword.keymanagementserviceshort}} regions](/docs/key-protect?topic=key-protect-regions). Your {{site.data.keyword.keymanagementserviceshort}} instance and {{site.data.keyword.cos_short}} bucket are created in the same region. The default region is `us-south`.
 
 {{site.data.keyword.cloud_notm}} recommends using one of the three [{{site.data.keyword.keymanagementserviceshort}} failover regions](/docs/key-protect?topic=key-protect-ha-dr#availability) (us-south, jp-tok, and eu-de) to avoid any service disruptions.
 {: recommend }
@@ -39,7 +39,7 @@ The DA supports deployment to any of the available [{{site.data.keyword.keymanag
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | `is_enterprise_account` | Whether the account corresponding to the `ibmcloud_api_key` is an enterprise account and, if so, is the primary account within the enterprise. | `bool` | `false` |
-| `enterprise_id` | The ID of the enterprise. If `__NULL__` then it is automatically retrieved if `is_enterprise_account` is `true`. Providing this value reduces the access policies that are necessary to run the DA. | `string` | `__NULL__` |
+| `enterprise_id` | The ID of the enterprise. If `__NULL__` then it is automatically retrieved if `is_enterprise_account` is `true`. Providing this value reduces the access policies that are necessary to run the deployable architecture. | `string` | `__NULL__` |
 {: caption="Enterprise Account Parameters" caption-side="bottom"}
 
 ### {{site.data.keyword.IBM_notm}} Cloudability configurations
@@ -52,7 +52,7 @@ The DA supports deployment to any of the available [{{site.data.keyword.keymanag
 | `frontdoor_public_key` | The public key that is used along with the `frontdoor_secret_key` to authenticate requests to Cloudability. Only required if `cloudability_auth_type` is `frontdoor`. See [acquiring an Access Administration API key](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#frontdoor-api-key) for steps to create your credentials. | `string` | `__NULL__` |
 | `frontdoor_secret_key` | The secret key that is used along with the `frontdoor_public_key` to authenticate requests to Cloudability. Only required if `cloudability_auth_type` is `frontdoor`.  See [acquiring an Access Administration API key](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#frontdoor-api-key) for steps to create your credentials. | `string` | `__NULL__` |
 | `cloudability_environment_id` | An ID corresponding to the Cloudability environment. Only required if `cloudability_auth_type` is `frontdoor`. | `string` | `__NULL__` |
-| `cloudability_host` | {{site.data.keyword.IBM_notm}} Cloudability host name as described in (https://help.apptio.com/en-us/cloudability/api/v3/getting%20started%20with%20the%20cloudability.htm) | `string` | `api.cloudability.com` |
+| `cloudability_host` | {{site.data.keyword.IBM_notm}} Cloudability host name | `string` | `api.cloudability.com` |
 | `skip_verification` | Whether to verify that the {{site.data.keyword.cloud_notm}} account is successfully integrated with Cloudability. This step is not strictly necessary for adding the account to Cloudability. Only applicable when `cloudability_auth_type` is `api_key`. | `bool` | `false` |
 {: caption="{{site.data.keyword.IBM_notm}} Cloudability Configurations" caption-side="bottom"}
 

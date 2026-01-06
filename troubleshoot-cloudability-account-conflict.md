@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-01-09"
+  years: 2026
+lastupdated: "2026-01-06"
 
 keywords: question about {{site.data.keyword.IBM_notm}} Cloudability Enablement
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do I see a Cloudability account conflict in the deployment logs of the DA?
+# Why do I see a Cloudability account conflict in the deployment logs of the deployable architecture?
 {: #troubleshoot-cldy-account-conflict}
 {: troubleshoot}
 
@@ -34,10 +34,10 @@ Error: unexpected response code '409': {"error":{"status":409,"code":"conflict",
 {: pre}
 
 
-This error is often because the {{site.data.keyword.cloud_notm}} account exists in Cloudability. The existing integration could have been added manually or by another deployment of the DA.
+This error is often because the {{site.data.keyword.cloud_notm}} account exists in Cloudability. The existing integration could have been added manually or by another deployment of the deployable architecture.
 {: tsCauses}
 
-The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the DA configuration to add the account. Deploying through the DA ensures that the vendor configurations  are set correctly within Cloudability.
+The recommended approach is to delete the existing {{site.data.keyword.cloud_notm}} account from {{site.data.keyword.IBM_notm}} Cloudability and re-run the deployable architecture configuration to add the account. Deploying through the deployable architecture ensures that the vendor configurations  are set correctly within Cloudability.
 {: tsResolve}
 
 Alternatively, the existing configuration can be manually updated within Cloudability to match the configuration outputs and the adding of the {{site.data.keyword.cloud_notm}} account to Cloudability through the deployable architecture can be disabled.

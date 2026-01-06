@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-06-27"
+  years: 2026
+lastupdated: "2026-01-06"
 
 subcollection: track-spend-with-cloudability
 
@@ -17,16 +17,16 @@ keywords:
 
 
 
-Learn about the management responsibilities and terms and conditions that you have when you use the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture (DA).
+Learn about the management responsibilities and terms and conditions that you have when you use the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture.
 {: shortdesc}
 
-- For more information about the responsibilities for you and for {{site.data.keyword.IBM}} when you use a DA, see [Understanding your responsibilities when you use DA](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures).
+- For more information about the responsibilities for you and for {{site.data.keyword.IBM}} when you use a deployable architecture, see [Understanding your responsibilities when you use deployable architecture](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures).
 - For a high-level view of the service types in {{site.data.keyword.cloud}} and the breakdown of responsibilities between the customer and {{site.data.keyword.IBM_notm}} for each type, see "[Shared responsibilities for using {{site.data.keyword.cloud}} products](/docs/overview?topic=overview-shared-responsibilities)".
 - For the overall terms of use, see [{{site.data.keyword.cloud_notm}} Terms and Notices](/docs/overview?topic=overview-terms).
 
 
 
-Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use the {{site.data.keyword.IBM_notm}} Cloudability Enablement DA.
+Review the following sections for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture.
 
 
 
@@ -60,7 +60,7 @@ In addition to the general [incident and operations management responsibilities]
 
 
 
-The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA does not identify specific responsibilities in this area. For information about the general change management responsibilities when you use {{site.data.keyword.IBM_notm}} deployable architectures, see [Change management](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#change-management-da).
+The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture does not identify specific responsibilities in this area. For information about the general change management responsibilities when you use {{site.data.keyword.IBM_notm}} deployable architectures, see [Change management](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#change-management-da).
 
 
 ## Identity and access management
@@ -75,8 +75,8 @@ In addition to the general [identity and access management responsibilities](/do
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Secure with least privilege | Documenting and maintaining the [minimal IAM access requirements to run the DA](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs). | Ensure that the DA operator (user, service ID, or trusted profile) is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs) |
-| Manage secrets | N/A | * Generate the necessary secrets (IAM and Cloudability API keys) and configure trusted profiles that are needed to run the DA. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
+| Secure with least privilege | Documenting and maintaining the [minimal IAM access requirements to run the deployable architecture](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs). | Ensure that the deployable architecture operator (user, service ID, or trusted profile) is [configured with the least privileged access policies](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-planning#cloudability-iam-prereqs) |
+| Manage secrets | N/A | * Generate the necessary secrets (IAM and Cloudability API keys) and configure trusted profiles that are needed to run the deployable architecture. \n * Manage generated secrets by following secure best practices such as rotating credentials. |
 | {{site.data.keyword.cos_short}} Billing Report Access | * Secure with Cloudability having only the [minimal required access by using iam custom roles](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs#what-access-for-cloudability). \n * Restrict access to the bucket to only permitted zones using [context-based restrictions (CBR)](/docs/account?topic=account-context-restrictions-whatis) | Administrate the Identity and Access Management (IAM) access policies and context-based restrictions (CBR) to allow access to the {{site.data.keyword.cos_full_notm}} bucket containing the {{site.data.keyword.IBM_notm}} billing reports. |
 {: row-headers}
 {: caption="Responsibilities for identity and access management" caption-side="bottom"}
@@ -94,8 +94,8 @@ In addition to the general [security and regulation compliance responsibilities]
 
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
-| Meet security and compliance objectives | Provide a secure DA that complies with declared standards. For more information about data security, see "[How do I know that my data is safe?](/docs/overview?topic=overview-security)" | N/A |
-| Verify configuration changes | N/A| Understand the effects on the security and compliance posture of any user-initiated changes to the default configuration. Run {{site.data.keyword.compliance_long}} checks if needed to ensure that the DA remains in compliance. |
+| Meet security and compliance objectives | Provide a secure deployable architecture that complies with declared standards. For more information about data security, see "[How do I know that my data is safe?](/docs/overview?topic=overview-security)" | N/A |
+| Verify configuration changes | N/A| Understand the effects on the security and compliance posture of any user-initiated changes to the default configuration. Run {{site.data.keyword.compliance_long}} checks if needed to ensure that the deployable architecture remains in compliance. |
 {: row-headers}
 {: caption="Responsibilities for security and regulation compliance" caption-side="bottom"}
 {: summary="The rows are read from left to right. The first column describes the task that the customer or {{site.data.keyword.IBM_notm}} might be responsibility for. The second column describes {{site.data.keyword.IBM_notm}} responsibilities for that task. The third column describes your responsibilities as the customer for that task."}
@@ -108,4 +108,4 @@ In addition to the general [security and regulation compliance responsibilities]
 
 Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provisioning disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
 
-The {{site.data.keyword.IBM_notm}} Cloudability Enablement DA does not identify specific responsibilities in this area. For information about the general Business Continuity and Disaster Recovery (BCDR) responsibilities when you use {{site.data.keyword.IBM_notm}} deployable architectures, see [Disaster recovery](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#disaster-recovery-da).
+The {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture does not identify specific responsibilities in this area. For information about the general Business Continuity and Disaster Recovery (BCDR) responsibilities when you use {{site.data.keyword.IBM_notm}} deployable architectures, see [Disaster recovery](/docs/secure-enterprise?topic=secure-enterprise-responsibilities-deployable-architectures#disaster-recovery-da).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-10"
+lastupdated: "2026-01-06"
 
 keywords:
 
@@ -17,7 +17,7 @@ subcollection: track-spend-with-cloudability
 # Getting help and support for {{site.data.keyword.IBM_notm}} Cloudability Enablement
 {: #help-and-support}
 
-If you have any questions or experience an issue deploying or configuring the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture, then you can use the following resources before you open a support case. For support related to {{site.data.keyword.IBM_notm}} Cloudability, visit the [Cloudability Help Center](https://help.apptio.com/en-us/cloudability/home.htm) or visit [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/)
+If you have any questions or experience an issue deploying or configuring the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture, then you can use the following resources before you open a support case. For support related to {{site.data.keyword.IBM_notm}} Cloudability visit [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/)
 {: shortdesc}
 
 * Review the [FAQs](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ibm-cloud-enablement-faqs) in the deployment guide.
@@ -61,4 +61,4 @@ If you're having issues deploying the deployable architecture, include the name 
 
 However, if you successfully deployed and are instead having an issue with a service in the deployable architecture, set that service as the product name in the case.
 
-For technical support related to Cloudability, visit the [Cloudability help center](https://help.apptio.com/en-us/cloudability/home.htm){: external} or open a ticket with [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/){: external}
+For technical support related to Cloudability, visit [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/){: external}
