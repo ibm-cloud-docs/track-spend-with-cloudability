@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-06"
+lastupdated: "2026-01-09"
 
 keywords:
 
@@ -101,6 +101,7 @@ The deployable architecture supports deployment to any of the available [{{site.
 | `object_versioning_enabled` | Enable object versioning to keep multiple versions of an object in the object storage bucket | `bool` | `false` |
 | `archive_days` | Specifies the number of days when the archive rule action takes effect. Value of `__NULL__` disables archiving | `number` | `__NULL__` |
 | `archive_type` | Specifies the storage class or archive type to which you want the object to transition. | `string` | `Glacier` |
+| `management_endpoint_type_for_bucket` | The type of endpoint for the IBM terraform provider to use to manage the bucket. (public, private, or direct) | "public",  "private", or "direct" | `public` |
 {: caption="{{site.data.keyword.cos_full_notm}} Bucket" caption-side="bottom"}
 
 ### Bucket Context-based restrictions
@@ -130,7 +131,9 @@ The deployable architecture supports deployment to any of the available [{{site.
 | `use_existing_key_ring` | Whether the `key_ring_name` corresponds to an existing key ring or a new key ring for storing the encryption key. | `boolean` | `false` |
 | `key_name` | Name of the {{site.data.keyword.keymanagementserviceshort}} key for encryption of the Object Storage bucket. If `__NULL__` then the name of the Object Storage bucket is used instead. | `string` | `__NULL__` |
 | `kms_rotation_enabled` | If set to true, {{site.data.keyword.keymanagementserviceshort}} enables a rotation policy on the {{site.data.keyword.keymanagementserviceshort}} instance. Only used if 'create_key_protect_instance' is true. | `boolean` | `false` |
-| `kms_rotation_interval_month` | Specifies the number of months for the encryption key to be rotated.. Must be between 1 and 12 inclusive. | `number` | `1` |
+| `kms_rotation_interval_month` | Specifies the number of months for the encryption key to be rotated. Must be between 1 and 12 inclusive. | `number` | `1` |
+| `key_protect_allowed_network` | The type of the allowed network to be set for the Key Protect instance. Possible values are 'private-only', or 'public-and-private'. Only used if 'create_key_protect_instance' is true. | `private-only` or `public-and-private` | `public-and-private` |
+
 {: caption="Bucket Encryption with {{site.data.keyword.keymanagementserviceshort}}" caption-side="bottom"}
 
 ### Bucket audit events

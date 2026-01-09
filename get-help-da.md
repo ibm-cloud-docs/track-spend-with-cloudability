@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2026-01-06"
+lastupdated: "2026-01-09"
 
 keywords:
 
@@ -24,7 +24,7 @@ If you have any questions or experience an issue deploying or configuring the {{
 * Review the [troubleshooting documentation](/docs/track-spend-with-cloudability?topic=track-spend-with-cloudability-ts-deploy-failed) to troubleshoot and resolve common issues.
 * ![{{site.data.keyword.cloud_notm}} icon](../icons/ibm-cloud-16.svg "{{site.data.keyword.cloud_notm}} icon") Check the status of the {{site.data.keyword.cloud_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 * ![GitHub icon](../icons/logo-github-16.svg "GitHub icon") Review the [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-cloudability-onboarding){: external} to see whether other users experienced the same problem.
-* Review the [Cloudability documentation](https://help.apptio.com/en-us/cloudability/product/setup_ibm_cloud_credentials_using_da_method.htm){: external}
+* Review the [Cloudability documentation](https://www.ibm.com/docs/en/cloudability-gov/cloudability-federal/saas?topic=cc-setup-cloud-credentials-using-deployable-architecture-da-app){: external}
 * Search [{{site.data.keyword.IBM_notm}} Support](https://www.ibm.com/mysupport/s/){: external}
 
 If you still can't resolve the problem, you can open a support case with {{site.data.keyword.cloud_notm}}. For more information, see [Creating {{site.data.keyword.cloud_notm}} support cases](/docs/account?topic=account-open-case&interface=ui). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).

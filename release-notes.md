@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-01-06"
+lastupdated: "2026-01-09"
 
 keywords:
 
@@ -25,6 +25,39 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture. Each release is grouped by the date. Release notes are available for a minimum of three years.
 {: shortdesc}
+
+## Jan 2026
+{: #subcollection-jan2026}
+
+### 8 Jan 2026
+{: #subcollection-8jan2026}
+
+Version 1.2.4 of the {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable architecture is available
+: Fixes an issue preventing the creation of the object storage bucket due to timeout errors when using the `private` endpoint type. Communication from Schematics to {{site.data.keyword.cos_full_notm}} no longer supports the `private` endpoint and requires either `direct` or `public` endpoint types. This release exposes new inputs allowing for the configuration of network endpoints to use when creating and managing the bucket.
+
+#### Inputs Added
+{: #subcollection-8jan2026-inputs}
+
+* `management_endpoint_type_for_bucket` - Configures the network endpoint type for bucket operations (default changed from `private` to `public`)
+* `key_protect_allowed_network` - Sets the allowed network type for the Key Protect instance (`private-only` or `public-and-private`). Only used when creating a new Key Protect instance
+
+Validation was added to the following fields:
+
+* `enterprise_id`
+* `resource_group_name`
+* `existing_cos_instance_id`
+* `cos_instance_name`
+* `bucket_name`
+* `existing_allowed_cbr_bucket_zone_id`
+* `cbr_additional_zone_name`
+* `cbr_cloudability_zone_name`
+* `cbr_cos_zone_name`
+* `cbr_schematics_zone_name`
+* `existing_kms_instance_crn`
+* `key_protect_instance_name`
+* `key_ring_name`
+* `key_name`
+* `monitoring_crn`
 
 ## June 2025
 {: #subcollection-june2025}
@@ -134,7 +167,7 @@ The latest {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable arc
 
 | Terraform Provider | Version  |
 | :----------------- | :------- |
-| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.79.2` |
+| [IBM-Cloud/ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest)      | `>=1.86.1` |
 | [Mastercard/restapi](https://registry.terraform.io/providers/Mastercard/restapi/latest) | `2.0.1`               |
 | [skyscrapr/terraform-provider-cloudability](https://registry.terraform.io/providers/skyscrapr/cloudability/latest) | `0.0.40`               |
 {: caption="Terraform provider dependencies" caption-side="bottom"}
@@ -142,8 +175,8 @@ The latest {{site.data.keyword.IBM_notm}} Cloudability Enablement deployable arc
 
 | Terraform Modules | Version  |
 | :----------------- | :------- |
-| [terraform-ibm-modules/resource-group/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/resource-group/ibm/latest)      | `>=1.1.6` |
-| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=9.0.7` |
-| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=5.1.8` |
-| [terraform-ibm-modules/cbr/ibm/](https://github.com/terraform-ibm-modules/terraform-ibm-cbr) | 1.29.0 |
+| [terraform-ibm-modules/resource-group/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/resource-group/ibm/latest)      | `>=1.4.7` |
+| [terraform-ibm-modules/cos/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest)      | `>=10.8.3` |
+| [terraform-ibm-modules/kms-all-inclusive/ibm](https://registry.terraform.io/modules/terraform-ibm-modules/kms-all-inclusive/ibm/latest)      | `>=5.5.20` |
+| [terraform-ibm-modules/cbr/ibm](https://github.com/terraform-ibm-modules/terraform-ibm-cbr) | 1.35.8 |
 {: caption="Terraform modules" caption-side="bottom"}
